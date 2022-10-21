@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mich-hales/FitCommit/issues"
   },
-  "homepage": "https://github.com/mich-hales/FitCommit#readme"
+  "homepage": "https://github.com/mich-hales/FitCommit#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
