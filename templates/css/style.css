@@ -1,0 +1,75 @@
+:root {
+    --red-color: #df2c14;
+    --light-background-grey: #7f7f7f;
+    --font-body: 'Roboto', sans-serif;
+}
+
+body { 
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url('../../assets/AdobeStock_266849226.jpeg');
+    object-fit: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    filter: brightness(100%);
+    background-color: var(--light-background-grey);
+    background-blend-mode: multiply;
+    color: white;
+}
+
+main {
+    margin: 1rem;
+    position: relative;
+}
+
+.fit-homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 25%;
+    margin-bottom: 25%;
+}
+
+.fit-homepage h2 {
+    font-size: 2.5rem;
+}
+
+.fit-homepage h1 {
+    font-size: 3rem;
+}
+
+.nav-color {
+    background-color: black;
+    height: 4.5rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: .05em;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    letter-spacing: .05em;
+}
+
+.get-fit {
+    color: var(--red-color);
+}
+
+.are-you-ready {
+    font-family: var(--font-body);
+    font-weight: lighter;
+}
+
+.get-started {
+    background-color: var(--red-color);
+    font-size: 1.25rem;
+}
+
+
+
+
+
