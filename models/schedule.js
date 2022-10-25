@@ -10,30 +10,22 @@ class schedule extends Model {
 
 schedule.init(
   {
-    day: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
+    day: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+    }, 
     exercise: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8],
-      },
+    
     },
   },
   {
