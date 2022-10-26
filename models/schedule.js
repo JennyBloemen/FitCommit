@@ -1,14 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class schedule extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
+class Schedule extends Model {}
+  
 
-schedule.init(
+Schedule.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -17,30 +13,30 @@ schedule.init(
       autoIncrement: true,
     },
     day: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
-      autoIncrement: true,
+      
     }, 
-    exercise: {
+    area: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    
-    },
-  },
-  {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
       },
-    },
+    }
+  },
+
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,
-    modelName: 'user',
+    underscored: true,  //need to look up
+    modelName: 'schedule',
   }
 );
 
-module.exports = User;
+module.exports = Schedule;
