@@ -7,25 +7,55 @@ const withAuth = require('../utils/auth');
 
 
 // Prevent non logged in users from viewing the homepage
-router.get('/', withAuth, async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
-    });
+router.get('/', (req, res) => {
 
-    const users = userData.map((project) => project.get({ plain: true }));
+  res.render('homepage', {
 
-    res.render('homepage', {
-      users,
-      // Pass the logged in flag to the template
-      logged_in: req.session.logged_in,
-      title: 'FitCommit',
-      style: 'jass.css',
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+    title: 'FitCommit',
+    style: 'jass.css',
+  });
+});
+
+router.get('/schedule', withAuth, async (req, res) => {
+try {
+  const userData = await User.findAll({
+    attributes: { exclude: ['password'] },
+    order: [['name', 'ASC']],
+  });
+
+  const users = userData.map((project) => project.get({ plain: true }));
+
+  res.render('schedule', {
+    users,
+    // Pass the logged in flag to the template
+    logged_in: req.session.logged_in,
+    title: 'Schedule',
+    style: 'schedule.css',
+  });
+} catch (err) {
+  res.status(500).json(err);
+}
+});
+
+router.get('/exercises', withAuth, async (req, res) => {
+try {
+  const userData = await User.findAll({
+    attributes: { exclude: ['password'] },
+    order: [['name', 'ASC']],
+  });
+
+  const users = userData.map((project) => project.get({ plain: true }));
+
+  res.render('exercises', {
+    users,
+    // Pass the logged in flag to the template
+    logged_in: req.session.logged_in,
+    title: 'Exercises',
+    style: 'exercises.css',
+  });
+} catch (err) {
+  res.status(500).json(err);
+}
 });
 
 router.get('/login', (req, res) => {
