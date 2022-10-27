@@ -32,6 +32,12 @@ main {
     margin-bottom: 25%;
 }
 
+/* .fit-background {
+    background-color: white;
+    border-radius: 5px;
+    opacity: 30%;
+} */
+
 .fit-homepage h2 {
     font-size: 2.5rem;
 }

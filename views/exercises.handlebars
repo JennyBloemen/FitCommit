@@ -1,0 +1,131 @@
+<div class="exercises">
+    <h2 class="browse-exercises">BROWSE EXERCISES</h2>
+
+    <section class="exercise-data container">
+      <div class="chest-section row">
+        <div class="chest title featured">
+          <h3>CHEST</h3>
+        </div>
+        <div class="chest-exercises featured col-md">
+          <ul>
+            {{#each chests as |chest|}}
+            <li>{{chest.name}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        
+      </div>
+      
+      <div class="shoulders-section row">
+        <div class="shoulder-exercises featured col-md">
+          <ul>
+            {{#each shoulders as |shoulder|}}
+            <li>{{shoulder.name}}</li>
+            {{#/each}}
+          </ul>
+        </div>
+        <div class="shoulders title featured">
+          <h3>SHOULDERS</h3>
+        </div>              
+      </div>
+
+        <div class="ab-section row">
+         <div class="abs title featured">
+           <h3>ABS</h3>
+         </div>
+         <div class="ab-exercises featured col-md">
+           <ul>
+             {{#each abs as |ab|}}
+            <li>{{ab.name}}</li>
+            {{#/each}}
+           </ul>
+         </div>
+        </div>
+
+        <div class="quads-section row">
+         <div class="quad-exercises featured col-md">
+           <ul>
+             {{#each quads as |quad|}}
+            <li>{{quad.name}}</li>
+            {{#/each}}
+           </ul>
+         </div>
+         <div class="quads title featured">
+           <h3>QUADS</h3>
+         </div>
+        </div>
+
+        <div class="quad-section row">
+          <div class="glutes title featured">
+            <h3>GLUTES</h3>
+          </div>
+          <div class="glute-exercises featured col-md">
+            <ul>
+              {{#each glutes as |glute|}}
+            <li>{{glute.name}}</li>
+            {{#/each}}
+            </ul>
+          </div>
+        </div>
+             
+        <div class="hamstring-section row">
+          <div class="hamstring-exercises featured col-md">
+            <ul>
+              {{#each hamstrings as |hamstring|}}
+            <li>{{hamstring.name}}</li>
+            {{#/each}}
+            </ul>
+          </div>
+          <div class="hamstrings title featured">
+            <h3>HAMSTRINGS</h3>
+          </div>
+        </div>
+         
+        <div class="back-section row">
+          <div class="back title featured">
+            <h3>BACK</h3>
+          </div>
+          <div class="back-exercises featured col-md">
+            <ul>
+              {{#each backs as |back|}}
+            <li>{{back.name}}</li>
+            {{#/each}}
+            </ul>
+          </div>
+        </div>
+             
+        <div class="biceps-section row">
+          <div class="biceps-exercises featured col-md">
+            <ul>
+              {{#each biceps as |bicep|}}
+            <li>{{bicep.name}}</li>
+            {{#/each}}
+            </ul>
+          </div>
+          <div class="biceps title featured">
+            <h3>BICEPS</h3>
+          </div>
+        </div>
+        
+        <div class="triceps-section row">
+          <div class="triceps title featured">
+            <h3>TRICEPS</h3>
+          </div>
+          <div class="triceps-exercises featured col-md">
+            <ul>
+              {{#each triceps as |tricep|}}
+            <li>{{tricep.name}}</li>
+              {{#/each}}
+            </ul>
+          </div>
+        </div>
+
+    </section>
+
+    <div class="buttons">
+        <button type="button" class="btn btn-dark home-btn">Home</button>
+        <button type="button" class="btn btn-dark schedule-btn">Schedule</button>
+      </div>
+</div>
+
+<script src="/js/exercises.js"></script>
