@@ -13,20 +13,26 @@ router.get('/', (req, res) => {
 });
 
 
+// attempted to edit this route, still not working
 // Route to render the users workout schedule
-router.get('/schedule/:id', withAuth, async (req, res) => {
+router.get('/schedule', withAuth, async (req, res) => {
 try {
-  const scheduleData = await User.findAll({
+  const scheduleData = await Schedule.findByPk(req.params.user_id, {
     attributes: { exclude: ['password'] },
-    order: [['name', 'ASC']],
+    include: [
+      {
+        model: User,
+        attributes: ['name'],
+        // order: [['name', 'ASC']],
+      }
+    ]
   });
 
-  const users = userData.map((project) => project.get({ plain: true }));
+  const schedule = scheduleData.get({ plain: true });
 
   res.render('schedule', {
-    users,
-    // Pass the logged in flag to the template
-    logged_in: req.session.logged_in,
+    ...schedule,
+    logged_in: true,
     title: 'Schedule',
     style: 'schedule.css',
   });
@@ -35,6 +41,8 @@ try {
 }
 });
 
+
+// Route to render exercises
 router.get('/exercises', withAuth, async (req, res) => {
 try {
   const userData = await User.findAll({
