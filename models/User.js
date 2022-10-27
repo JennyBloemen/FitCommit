@@ -8,7 +8,7 @@ class User extends Model {
   }
 }
 
-User.init(
+User.init (
   {
     id: {
       type: DataTypes.INTEGER,
@@ -32,9 +32,12 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        len: {
+          args: [8, 20], 
+          msg: "The password length should be between 8 and 20 characters."
+        },
       },
-    },
+    }
   },
   {
     hooks: {
@@ -43,6 +46,7 @@ User.init(
         return newUserData;
       },
     },
+  
     sequelize,
     timestamps: false,
     freezeTableName: true,
