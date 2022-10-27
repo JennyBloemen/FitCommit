@@ -14,7 +14,6 @@ Workouts.init(
     exercise: {
       type: DataTypes.STRING,
       allowNull: true,
-      
     },
   },
   {
