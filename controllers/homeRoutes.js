@@ -1,10 +1,6 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Schedule } = require('../models');
 const withAuth = require('../utils/auth');
-
-// mich - remember to add style attribute with specific css layout for each page (style: 'exercises.css') jass.css or schedule.css -- goes in render section within curly brackets
-// also need to change titles for each section (schedule & exercises)
-
 
 // Prevent non logged in users from viewing the homepage
 router.get('/', (req, res) => {
@@ -16,9 +12,11 @@ router.get('/', (req, res) => {
   });
 });
 
-router.get('/schedule', withAuth, async (req, res) => {
+
+// Route to render the users workout schedule
+router.get('/schedule/:id', withAuth, async (req, res) => {
 try {
-  const userData = await User.findAll({
+  const scheduleData = await User.findAll({
     attributes: { exclude: ['password'] },
     order: [['name', 'ASC']],
   });
