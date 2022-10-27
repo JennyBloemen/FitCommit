@@ -1,0 +1,82 @@
+:root {
+    --red-color: #df2c14;
+    --light-background-grey: #f0f8ff;
+    --font-body: 'Roboto', sans-serif;
+    --blue-white: #e7eff6;
+}
+
+body { 
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--light-background-grey);
+    color: white;
+    font-family: (--font-body);
+}
+
+main {
+    margin: 1rem;
+    position: relative;
+}
+
+
+.nav-color {
+    background-color: black;
+    height: 4.5rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: .05em;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    letter-spacing: .05em;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    letter-spacing: .03em;
+}
+
+#weekly-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.my-workout {
+    font-size: 3rem;
+    letter-spacing: .04em;
+    font-family: var(--font-body);
+    font-weight: bold;
+    color: black;
+}
+
+.form-group {
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+    margin: .25rem;
+}
+
+.form-control {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.schedule-btn {
+    background-color: var(--red-color);
+    font-size: 1.5rem;
+}
+
