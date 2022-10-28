@@ -1,31 +1,67 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Schedule } = require('../models');
 const withAuth = require('../utils/auth');
 
-// mich - remember to add style attribute with specific css layout for each page (style: 'exercises.css') jass.css or schedule.css -- goes in render section within curly brackets
-// also need to change titles for each section (schedule & exercises)
-
-
 // Prevent non logged in users from viewing the homepage
-router.get('/', withAuth, async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
-    });
+router.get('/', (req, res) => {
 
-    const users = userData.map((project) => project.get({ plain: true }));
+  res.render('homepage', {
 
-    res.render('homepage', {
-      users,
-      // Pass the logged in flag to the template
-      logged_in: req.session.logged_in,
-      title: 'FitCommit',
-      style: 'jass.css',
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+    title: 'FitCommit',
+    style: 'jass.css',
+  });
+});
+
+
+// attempted to edit this route, still not working
+// Route to render the users workout schedule
+router.get('/schedule', withAuth, async (req, res) => {
+try {
+  const scheduleData = await Schedule.findByPk(req.params.user_id, {
+    attributes: { exclude: ['password'] },
+    include: [
+      {
+        model: User,
+        attributes: ['name'],
+        // order: [['name', 'ASC']],
+      }
+    ]
+  });
+
+  const schedule = scheduleData.get({ plain: true });
+
+  res.render('schedule', {
+    ...schedule,
+    logged_in: true,
+    title: 'Schedule',
+    style: 'schedule.css',
+  });
+} catch (err) {
+  res.status(500).json(err);
+}
+});
+
+
+// Route to render exercises
+router.get('/exercises', withAuth, async (req, res) => {
+try {
+  const userData = await User.findAll({
+    attributes: { exclude: ['password'] },
+    order: [['name', 'ASC']],
+  });
+
+  const users = userData.map((project) => project.get({ plain: true }));
+
+  res.render('exercises', {
+    users,
+    // Pass the logged in flag to the template
+    logged_in: req.session.logged_in,
+    title: 'Exercises',
+    style: 'exercises.css',
+  });
+} catch (err) {
+  res.status(500).json(err);
+}
 });
 
 router.get('/login', (req, res) => {
