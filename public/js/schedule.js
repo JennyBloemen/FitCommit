@@ -134,3 +134,4 @@ submitBtn.addEventListener('click', populateWeeklyLayout);
 
 // if browse exercises button is clicked, will populate next page
 // browseBtn.addEventListener('click', )
+
