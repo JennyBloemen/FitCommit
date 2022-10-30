@@ -10,7 +10,7 @@ const getExercises = async (event) => {
     .then(res => {
         data = res.data;
         data.forEach( e => {
-            console.log(${})
+            console.log($,{})
         })
     })
     .catch(error => {
