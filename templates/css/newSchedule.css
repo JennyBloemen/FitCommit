@@ -1,0 +1,164 @@
+:root {
+    --red-color: #df2c14;
+    --light-background-grey: #f0f8ff;
+    --font-body: 'Roboto', sans-serif;
+    --blue-white: #e7eff6;
+}
+
+body { 
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--light-background-grey);
+    color: black;
+    font-family: (--font-body);
+}
+
+main {
+    margin: 1rem;
+    position: relative;
+}
+
+
+.nav-color {
+    background-color: black;
+    height: 4.5rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: .05em;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    letter-spacing: .05em;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    letter-spacing: .03em;
+}
+
+#weekly-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    background-color: var(--red-color);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 5px;
+}
+
+.my-workout {
+    font-size: 3rem;
+    letter-spacing: .04em;
+    font-family: var(--font-body);
+    font-weight: bold;
+    color: black;
+}
+
+.form-group {
+    text-align: center;
+    font-family: var(--font-body);
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+    margin: .25rem;
+}
+
+.form-control {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.absolute {
+    position: relative;
+}
+
+.delete-btn{
+    font-size: 1rem;
+    width: 40%;
+    position: absolute;
+    top: 220px;
+    bottom: 10px; 
+    right: 17px;
+}
+
+.add-btn{
+    font-size: 1rem;
+    width: 40%;
+    position: absolute;
+    top: 220px;
+    bottom: 10px; 
+    left: 17px;
+}
+
+.browse-btn {
+    font-size: 1.2rem;
+}
+
+#browseButton {
+    font-size: 1.5rem;
+    background-color: var(--red-color);
+}
+
+#dropdownMenuLink {
+    background-color: white;
+    width: 90%;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    height: 3rem;
+    padding: .5rem;
+}
+
+.hide {
+    display: none;
+}
+
+.biggerBox {
+    width: 13rem;
+    margin: .5rem;
+}
+
+.populated-data {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.card-header {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.card {
+    height: 20rem;
+    width: 16rem;
+}
+
+.buttons-schedule {
+    margin-top: 3rem;
+}
+
+.inputHeader {
+    font-size: 2rem;
+}
+
+.inputFont {
+    font-size: 1.5rem;
+}
+
+.headerSpacing {
+    margin: 1rem;
+    color: black;
+}

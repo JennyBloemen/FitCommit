@@ -1,3 +1,4 @@
+{{#if logged_in}}
 <div class="exercises">
     <h2 class="browse-exercises">BROWSE EXERCISES</h2>
 
@@ -8,16 +9,16 @@
         </div>
         <div class="chest-exercises featured col-md">
           <ul>
-            {{#if if_equals workouts.area_id 1}}
-            {{#each workout as |workouts|}}
-            <li>{{workouts.exercise}}</li>
+            {{#if chest}}
+            {{#each exercises as |exercise|}}
+            <li>{{exercise.exercise}}</li>
             {{/each}}
-            {{/if}}
+            {{/if}}        
           </ul>
         </div>
         
       </div>
-      
+{{!--       
       <div class="shoulders-section row">
         <div class="shoulder-exercises featured col-md">
           <ul>
@@ -136,7 +137,7 @@
             {{/if}}
             </ul>
           </div>
-        </div>
+        </div> --}}
 
     </section>
 
@@ -145,5 +146,7 @@
         <button type="button" class="btn btn-dark schedule-btn">Schedule</button>
       </div>
 </div>
-
+{{else}}
+<a href="/login">You must login first to view the exercise library</a>
 <script src="/js/exercises.js"></script>
+{{#/if}}

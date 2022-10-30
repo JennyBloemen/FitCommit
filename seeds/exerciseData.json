@@ -1,0 +1,229 @@
+[
+    {
+      "exercise": "Decline Push-up",
+      "area" : "Chest",
+      "chest" : true
+    },
+    {
+      "exercise": "Flat Bench Press",
+      "area" : "Chest",
+      "chest" : true
+    },
+    {
+      "exercise": "Cable Crossover",
+      "area" : "Chest",
+      "chest" : true
+    },
+    {
+      "exercise": "Chest Dip",
+      "area" : "Chest",
+      "chest" : true
+    },
+    {
+      "exercise": "Resistence Band Pullover",
+      "area" : "Chest",
+      "chest" : true
+    },
+    {
+      "exercise": "Chest Fly",
+      "area" : "Chest",
+      "chest" : true
+    },
+    {
+      "exercise": "Side Lateral Raise",
+      "area" : "Shoulders"
+    },
+    {
+      "exercise": "Shoulder Stretch",
+      "area" : "Shoulders"
+    },
+    {
+      "exercise": "Front Raise",
+      "area" : "Shoulders"
+    },
+    {
+      "exercise": "Overhead Press",
+      "area" : "Shoulders"
+    },
+    {
+      "exercise": "Reverse Fly",
+      "area" : "Shoulders"
+    },
+    {
+      "exercise": "Dumbbell Shoulder Press",
+      "area" : "Shoulders"
+    },
+    {
+      "exercise": "Crunches",
+      "area" : "Abs"
+    },
+    {
+      "exercise": "Flutter Kicks",
+      "area" : "Abs"
+    },
+    {
+      "exercise": "Sitting Twists",
+      "area" : "Abs"
+    },
+    {
+      "exercise": "Half Wipers",
+      "area" : "Abs"
+    },
+    {
+      "exercise": "Elbow Plank",
+      "area" : "Abs"
+    },
+    {
+      "exercise": "Leg Raises",
+      "area" : "Abs"
+    },
+    {
+      "exercise": "Goblet Squat",
+      "area" : "Quads"
+    },
+    {
+      "exercise": "Bulgarian Split Squat",
+      "area" : "Quads"
+    },
+    {
+      "exercise": "Forward Lunge",
+      "area" : "Quads"
+    },
+    {
+      "exercise": "Kneeling Leg Extension",
+      "area" : "Quads"
+    },
+    {
+      "exercise": "Lateral Lunge",
+      "area" : "Quads"
+    },
+    {
+      "exercise": "Box Jump",
+      "area" : "Quads"
+    },
+    {
+      "exercise": "Step Downs",
+      "area" : "Glutes"
+    },
+    {
+      "exercise": "Back Squat",
+      "area" : "Glutes"
+    },
+    {
+      "exercise": "Deadlift",
+      "area" : "Glutes"
+    },
+    {
+      "exercise": "Lateral lunge",
+      "area" : "Glutes"
+    },
+    {
+      "exercise": "Barbell Hip Thrust",
+      "area" : "Glutes"
+    },
+    {
+      "exercise": "Modified Curtsy Lunge",
+      "area" : "Glutes"
+    },
+    {
+      "exercise": "Walking Lunge",
+      "area" : "Glutes"
+    },
+    {
+      "exercise": "Good Morning",
+      "area" : "Hamstrings"
+    },
+    {
+      "exercise": "Sumo Deadlift",
+      "area" : "Hamstrings"
+    },
+    {
+      "exercise": "Romanian Deadlift",
+      "area" : "Hamstrings"
+    },
+    {
+      "exercise": "Kettlebell Swing",
+      "area" : "Hamstrings"
+    },
+    {
+      "exercise": "Sumo Squat",
+      "area" : "Hamstrings"
+    },
+    {
+      "exercise": "Single-Leg Deadlift",
+      "area" : "Hamstrings"
+    },
+    {
+      "exercise": "Single-Arm Lat Row",
+      "area" : "Back"
+    },
+    {
+      "exercise": "Seated Cable Row",
+      "area" : "Back"
+    },
+    {
+      "exercise": "Lat Pulldowns",
+      "area" : "Back"
+    },
+    {
+      "exercise": "Dumbbell pullover",
+      "area" : "Back"
+    },
+    {
+      "exercise": "Face Pulls",
+      "area" : "Back"
+    },
+    {
+      "exercise": "Bentover Row",
+      "area" : "Back"
+    },
+    {
+      "exercise": "In and Out Curls",
+      "area" : "Biceps"
+    },
+    {
+      "exercise": "Hammer Curl",
+      "area" : "Biceps"
+    },
+    {
+      "exercise": "Preacher Curl",
+      "area" : "Biceps"
+    },
+    {
+      "exercise": "Cross Body Hammer Curl",
+      "area" : "Biceps"
+    },
+    {
+      "exercise": "Concentration Curl",
+      "area" : "Biceps"
+    },
+    {
+      "exercise": "Reverse Barbell Curl",
+      "area" : "Biceps"
+    },
+  
+    {
+      "exercise": "Close-grip Bench Press",
+      "area" : "Triceps"
+    },
+    {
+      "exercise": "Tricep Dips",
+      "area" : "Triceps"
+    },
+    {
+      "exercise": "Isolated Triceps Extension",
+      "area" : "Triceps"
+    },
+    {
+      "exercise": "Skullcrushers",
+      "area" : "Triceps"
+    },
+    {
+      "exercise": "Cable Pushdowns",
+      "area" : "Triceps"
+    },
+    {
+      "exercise": "Diamond Press-up",
+      "area" : "Triceps"
+    }
+  ]

@@ -14,4 +14,10 @@
 //     }
 // }
 
-// document.querySelector('.get-started').addEventListener('click', getStarted);
+
+const getStarted = () => {
+    document.location.replace('/schedule');
+}
+
+document.querySelector('#getStarted').addEventListener('click', getStarted);
+

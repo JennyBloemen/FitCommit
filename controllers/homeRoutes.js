@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Schedule } = require('../models');
+const { User, Schedule, userSchedule,  Exercise } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Prevent non logged in users from viewing the homepage
@@ -15,14 +15,18 @@ router.get('/', (req, res) => {
 
 // attempted to edit this route, still not working
 // Route to render the users workout schedule
-router.get('/schedule', withAuth, async (req, res) => {
+router.get('/schedule:id', withAuth, async (req, res) => {
 try {
-  const scheduleData = await Schedule.findByPk(req.params.user_id, {
+  const scheduleData = await userSchedule.findByPk(req.params.id, {
     attributes: { exclude: ['password'] },
     include: [
       {
         model: User,
-        attributes: ['name'],
+        attributes: [
+          'name',
+          'day',
+          'area',
+      ],
         // order: [['name', 'ASC']],
       }
     ]
@@ -45,17 +49,25 @@ try {
 // Route to render exercises
 router.get('/exercises', withAuth, async (req, res) => {
 try {
-  const userData = await User.findAll({
-    attributes: { exclude: ['password'] },
-    order: [['name', 'ASC']],
+    const exerciseData = await Exercise.findAll({
+      include: [
+      {
+        attributes: [
+          'exercise',
+          'area',
+          'chest',
+        ],
+      }
+    ]
   });
 
-  const users = userData.map((project) => project.get({ plain: true }));
+  const exercises = exerciseData.map((exercise) => exercise.get({ plain: true }));
 
+  console.log(exercises);
   res.render('exercises', {
-    users,
+    exercises,
     // Pass the logged in flag to the template
-    logged_in: req.session.logged_in,
+    logged_in: true,
     title: 'Exercises',
     style: 'exercises.css',
   });

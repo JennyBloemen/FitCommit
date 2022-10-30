@@ -16,6 +16,10 @@ User.init (
       primaryKey: true,
       autoIncrement: true,
     },
+    // schedule: {
+    //   type: DataTypes.ARRAY,
+    //   allowNull: true,
+    // },
     name: {
       type: DataTypes.STRING,
       allowNull: false,

@@ -24,7 +24,8 @@ const sunDelete = document.querySelector('#seventh-btn');
 
 
 // if monday is selected in the dropdown menu, whatever input is submitted, will populate in the monday content section
-const populateWeeklyLayout = () => {
+const populateWeeklyLayout = async (event) => {
+    event.preventDefault();
     let userInput = muscleGroupInput.value.trim();
     console.log(`Muscle Group: ${userInput}!`)
 
@@ -32,101 +33,119 @@ const populateWeeklyLayout = () => {
 
     let selectedValue = days.options[days.selectedIndex].value;
 
-        if (selectedValue === 'monday') {
-            console.log(selectedValue);
-            mondayContent.textContent = userInput;
-            monDelete.classList.remove('hide');
-            muscleGroupInput.value = '';
-
-            const mondayDelete = () => {
-                monDelete.classList.add('hide');
-                mondayContent.textContent = '';
+    // day, area, text, etc. -- make sure it matches with userRoutes EDIT THIS!!
+    if (userInput) {
+        const response = await fetch (`/api/users/schedule`, {
+            method: 'POST',
+            body: JSON.stringify({ userInput }),
+            headers: {
+                'Content-Type' : 'application/json',
             }
-            
-            monDelete.addEventListener('click', mondayDelete);
-            return;
-        } else if (selectedValue === 'tuesday') {
-            console.log(selectedValue);
-            tuesdayContent.textContent = userInput;
-            tueDelete.classList.remove('hide');
-            muscleGroupInput.value = '';
+        });
 
-            const tuesdayDelete = () => {
-                tueDelete.classList.add('hide');
-                tuesdayContent.textContent = '';
+        if (response.ok) {
+
+            if (selectedValue === 'monday') {
+                console.log(selectedValue);
+                mondayContent.textContent = userInput;
+                monDelete.classList.remove('hide');
+                muscleGroupInput.value = '';
+
+                const mondayDelete = () => {
+                    monDelete.classList.add('hide');
+                    mondayContent.textContent = '';
+                }
+                
+                monDelete.addEventListener('click', mondayDelete);
+                return;
+            } else if (selectedValue === 'tuesday') {
+                console.log(selectedValue);
+                tuesdayContent.textContent = userInput;
+                tueDelete.classList.remove('hide');
+                muscleGroupInput.value = '';
+
+                const tuesdayDelete = () => {
+                    tueDelete.classList.add('hide');
+                    tuesdayContent.textContent = '';
+                }
+                
+                tueDelete.addEventListener('click', tuesdayDelete);
+                return;
+            } else if (selectedValue === 'wednesday') {
+                wednesdayContent.textContent = userInput;
+                wedDelete.classList.remove('hide');
+                muscleGroupInput.value = '';
+
+                const wednesdayDelete = () => {
+                    wedDelete.classList.add('hide');
+                    wednesdayContent.textContent = '';
+                }
+                
+                wedDelete.addEventListener('click', wednesdayDelete);
+
+                return;
+            } else if (selectedValue === 'thursday') {
+                thursdayContent.textContent = userInput;
+                thurDelete.classList.remove('hide');
+                muscleGroupInput.value = '';
+
+                const thursdayDelete = () => {
+                    thurDelete.classList.add('hide');
+                    thursdayContent.textContent = '';
+                }
+                
+                thurDelete.addEventListener('click', thursdayDelete);
+
+                return;
+            } else if (selectedValue === 'friday') {
+                fridayContent.textContent = userInput;
+                friDelete.classList.remove('hide');
+                muscleGroupInput.value = '';
+
+                const fridayDelete = () => {
+                    friDelete.classList.add('hide');
+                    fridayContent.textContent = '';
+                }
+                
+                friDelete.addEventListener('click', fridayDelete);
+
+                return;
+            } else if (selectedValue === 'saturday') {
+                saturdayContent.textContent = userInput;
+                satDelete.classList.remove('hide');
+                muscleGroupInput.value = '';
+
+                const saturdayDelete = () => {
+                    satDelete.classList.add('hide');
+                    saturdayContent.textContent = '';
+                }
+                
+                satDelete.addEventListener('click', saturdayDelete);
+
+                return;
+            } else if (selectedValue === 'sunday') {
+                sundayContent.textContent = userInput;
+                sunDelete.classList.remove('hide');
+                muscleGroupInput.value = '';
+
+                const sundayDelete = () => {
+                    sunDelete.classList.add('hide');
+                    sundayContent.textContent = '';
+                }
+                
+                sunDelete.addEventListener('click', sundayDelete);
+
+                return;
+            } else {
+                console.log('select a day of of the week');
             }
-            
-            tueDelete.addEventListener('click', tuesdayDelete);
-            return;
-        } else if (selectedValue === 'wednesday') {
-            wednesdayContent.textContent = userInput;
-            wedDelete.classList.remove('hide');
-            muscleGroupInput.value = '';
-
-            const wednesdayDelete = () => {
-                wedDelete.classList.add('hide');
-                wednesdayContent.textContent = '';
-            }
-            
-            wedDelete.addEventListener('click', wednesdayDelete);
-
-            return;
-        } else if (selectedValue === 'thursday') {
-            thursdayContent.textContent = userInput;
-            thurDelete.classList.remove('hide');
-            muscleGroupInput.value = '';
-
-            const thursdayDelete = () => {
-                thurDelete.classList.add('hide');
-                thursdayContent.textContent = '';
-            }
-            
-            thurDelete.addEventListener('click', thursdayDelete);
-
-            return;
-        } else if (selectedValue === 'friday') {
-            fridayContent.textContent = userInput;
-            friDelete.classList.remove('hide');
-            muscleGroupInput.value = '';
-
-            const fridayDelete = () => {
-                friDelete.classList.add('hide');
-                fridayContent.textContent = '';
-            }
-            
-            friDelete.addEventListener('click', fridayDelete);
-
-            return;
-        } else if (selectedValue === 'saturday') {
-            saturdayContent.textContent = userInput;
-            satDelete.classList.remove('hide');
-            muscleGroupInput.value = '';
-
-            const saturdayDelete = () => {
-                satDelete.classList.add('hide');
-                saturdayContent.textContent = '';
-            }
-            
-            satDelete.addEventListener('click', saturdayDelete);
-
-            return;
-        } else if (selectedValue === 'sunday') {
-            sundayContent.textContent = userInput;
-            sunDelete.classList.remove('hide');
-            muscleGroupInput.value = '';
-
-            const sundayDelete = () => {
-                sunDelete.classList.add('hide');
-                sundayContent.textContent = '';
-            }
-            
-            sunDelete.addEventListener('click', sundayDelete);
-
-            return;
-        } else {
-            console.log('select a day of of the week');
+    } else {
+        alert('failed to load schedule')
+    }
         }
-};
+    }
+
+    
 
 
 // if the submit button is clicked, add content to weekly layout
@@ -135,3 +154,16 @@ submitBtn.addEventListener('click', populateWeeklyLayout);
 // if browse exercises button is clicked, will populate next page
 // browseBtn.addEventListener('click', )
 
+// delete button is clicked, will delete an item
+const delButtonHandler = async (event) => {
+    
+}
+
+
+monDelete.addEventListener('click', delButtonHandler);
+tueDelete.addEventListener('click', delButtonHandler);
+wedDelete.addEventListener('click', delButtonHandler);
+thurDelete.addEventListener('click', delButtonHandler); 
+friDelete.addEventListener('click', delButtonHandler); 
+satDelete.addEventListener('click', delButtonHandler); 
+sunDelete.addEventListener('click', delButtonHandler); 
