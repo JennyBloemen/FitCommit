@@ -15,12 +15,19 @@ Workouts.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    area_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "Area",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true, //need to look up
+    underscored: true, //converts camel case to underscore
     modelName: "workouts",
   }
 );
