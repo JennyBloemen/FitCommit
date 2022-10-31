@@ -1,222 +1,272 @@
 [
   {
-    "exercise": "Incline push-up",
-    "area_id": 1
+    "exercise": "Decline Push-up",
+    "area": "Chest",
+    "chest": true
   },
   {
-    "exercise": "Flat bench press",
-    "area_id": 1
+    "exercise": "Flat Bench Press",
+    "area": "Chest",
+    "chest": true
   },
   {
-    "exercise": "Cable crossover",
-    "area_id": 1
+    "exercise": "Cable Crossover",
+    "area": "Chest",
+    "chest": true
   },
   {
-    "exercise": "Chest dip",
-    "area_id": 1
+    "exercise": "Chest Dip",
+    "area": "Chest",
+    "chest": true
   },
   {
-    "exercise": "Resistence band pullover",
-    "area_id": 1
+    "exercise": "Resistence Band Pullover",
+    "area": "Chest",
+    "chest": true
   },
   {
-    "exercise": "Chest fly",
-    "area_id": 1
+    "exercise": "Chest Fly",
+    "area": "Chest",
+    "chest": true
   },
   {
-    "exercise": "Side lateral raise",
-    "area_id": 2
+    "exercise": "Side Lateral Raise",
+    "area": "Shoulders",
+    "shoulders": true
   },
   {
-    "exercise": "Shoulder stretch",
-    "area_id": 2
+    "exercise": "Shoulder Stretch",
+    "area": "Shoulders",
+    "shoulders": true
   },
   {
-    "exercise": "Front raise",
-    "area_id": 2
+    "exercise": "Front Raise",
+    "area": "Shoulders",
+    "shoulders": true
   },
   {
-    "exercise": "Overhead press",
-    "area_id": 2
+    "exercise": "Overhead Press",
+    "area": "Shoulders",
+    "shoulders": true
   },
   {
-    "exercise": "Reverse fly",
-    "area_id": 2
+    "exercise": "Reverse Fly",
+    "area": "Shoulders",
+    "shoulders": true
   },
   {
-    "exercise": "Dumbbell shoulder press",
-    "area_id": 2
+    "exercise": "Dumbbell Shoulder Press",
+    "area": "Shoulders",
+    "shoulders": true
   },
   {
     "exercise": "Crunches",
-    "area_id": 3
+    "area": "Abs",
+    "abs": true
   },
   {
-    "exercise": "Flutter kicks",
-    "area_id": 3
+    "exercise": "Flutter Kicks",
+    "area": "Abs",
+    "abs": true
   },
   {
-    "exercise": "Sitting twists",
-    "area_id": 3
+    "exercise": "Sitting Twists",
+    "area": "Abs",
+    "abs": true
   },
   {
-    "exercise": "Half wipers",
-    "area_id": 3
+    "exercise": "Half Wipers",
+    "area": "Abs",
+    "abs": true
   },
   {
-    "exercise": "Elbow plank",
-    "area_id": 3
+    "exercise": "Elbow Plank",
+    "area": "Abs",
+    "abs": true
   },
   {
-    "exercise": "Leg raises",
-    "area_id": 3
+    "exercise": "Leg Raises",
+    "area": "Abs",
+    "abs": true
   },
   {
-    "exercise": "Goblet squat",
-    "area_id": 4
+    "exercise": "Goblet Squat",
+    "area": "Quads",
+    "quads": true
   },
   {
-    "exercise": "Bulgarian split squat",
-    "area_id": 4
+    "exercise": "Bulgarian Split Squat",
+    "area": "Quads",
+    "quads": true
   },
   {
-    "exercise": "Forward lunge",
-    "area_id": 4
+    "exercise": "Forward Lunge",
+    "area": "Quads",
+    "quads": true
   },
   {
-    "exercise": "Kneeling leg extension",
-    "area_id": 4
+    "exercise": "Kneeling Leg Extension",
+    "area": "Quads",
+    "quads": true
   },
   {
-    "exercise": "Lateral lunge",
-    "area_id": 4
+    "exercise": "Lateral Lunge",
+    "area": "Quads",
+    "quads": true
   },
   {
-    "exercise": "Box jump",
-    "area_id": 4
+    "exercise": "Box Jump",
+    "area": "Quads",
+    "quads": true
   },
   {
-    "exercise": "Step downs",
-    "area_id": 5
+    "exercise": "Step Downs",
+    "area": "Glutes",
+    "glutes": true
   },
   {
-    "exercise": "Back squat",
-    "area_id": 5
+    "exercise": "Back Squat",
+    "area": "Glutes",
+    "glutes": true
   },
   {
     "exercise": "Deadlift",
-    "area_id": 5
+    "area": "Glutes",
+    "glutes": true
   },
   {
     "exercise": "Lateral lunge",
-    "area_id": 5
+    "area": "Glutes",
+    "glutes": true
   },
   {
-    "exercise": "Barbell glute bridge",
-    "area_id": 5
+    "exercise": "Barbell Hip Thrust",
+    "area": "Glutes",
+    "glutes": true
   },
   {
-    "exercise": "Modified curtsy lunge",
-    "area_id": 5
+    "exercise": "Modified Curtsy Lunge",
+    "area": "Glutes",
+    "glutes": true
   },
   {
-    "exercise": "Walking lunge",
-    "area_id": 5
+    "exercise": "Good Morning",
+    "area": "Hamstrings",
+    "hamstrings": true
   },
   {
-    "exercise": "Good morning",
-    "area_id": 6
+    "exercise": "Sumo Deadlift",
+    "area": "Hamstrings",
+    "hamstrings": true
   },
   {
-    "exercise": "Marching glute bridge",
-    "area_id": 6
+    "exercise": "Romanian Deadlift",
+    "area": "Hamstrings",
+    "hamstrings": true
   },
   {
-    "exercise": "Barbell hip thrust",
-    "area_id": 6
+    "exercise": "Kettlebell Swing",
+    "area": "Hamstrings",
+    "hamstrings": true
   },
   {
-    "exercise": "Kettlebell swing",
-    "area_id": 6
+    "exercise": "Sumo Squat",
+    "area": "Hamstrings",
+    "hamstrings": true
   },
   {
-    "exercise": "Sumo squat",
-    "area_id": 6
+    "exercise": "Single-Leg Deadlift",
+    "area": "Hamstrings",
+    "hamstrings": true
   },
   {
-    "exercise": "Single-Leg deadlift",
-    "area_id": 6
+    "exercise": "Single-Arm Lat Row",
+    "area": "Back",
+    "back": true
   },
   {
-    "exercise": "Superman"
+    "exercise": "Seated Cable Row",
+    "area": "Back",
+    "back": true
   },
   {
-    "exercise": "Cat cow",
-    "area_id": 7
-  },
-  {
-    "exercise": "Knee to chest",
-    "area_id": 7
+    "exercise": "Lat Pulldowns",
+    "area": "Back",
+    "back": true
   },
   {
     "exercise": "Dumbbell pullover",
-    "area_id": 7
+    "area": "Back",
+    "back": true
   },
   {
-    "exercise": "Bird dog",
-    "area_id": 7
+    "exercise": "Face Pulls",
+    "area": "Back",
+    "back": true
   },
   {
-    "exercise": "Plank",
-    "area_id": 7
+    "exercise": "Bentover Row",
+    "area": "Back",
+    "back": true
   },
   {
-    "exercise": "Pull-up",
-    "area_id": 8
+    "exercise": "In and Out Curls",
+    "area": "Biceps",
+    "biceps": true
   },
   {
-    "exercise": "Hammer curl",
-    "area_id": 8
+    "exercise": "Hammer Curl",
+    "area": "Biceps",
+    "biceps": true
   },
   {
-    "exercise": "Preacher curl",
-    "area_id": 8
+    "exercise": "Preacher Curl",
+    "area": "Biceps",
+    "biceps": true
   },
   {
-    "exercise": "Cross body hammer curl",
-    "area_id": 8
+    "exercise": "Cross Body Hammer Curl",
+    "area": "Biceps",
+    "biceps": true
   },
   {
-    "exercise": "Concentration curl",
-    "area_id": 8
+    "exercise": "Concentration Curl",
+    "area": "Biceps",
+    "biceps": true
   },
   {
-    "exercise": "Reverse barbell curl",
-    "area_id": 8
-  },
-
-  {
-    "exercise": "Close-grip bench press",
-    "area_id": 9
+    "exercise": "Reverse Barbell Curl",
+    "area": "Biceps",
+    "biceps": true
   },
   {
-    "exercise": "Tricep dips",
-    "area_id": 9
+    "exercise": "Close-grip Bench Press",
+    "area": "Triceps",
+    "triceps": true
   },
   {
-    "exercise": "Isolated triceps extension",
-    "area_id": 9
+    "exercise": "Tricep Dips",
+    "area": "Triceps",
+    "triceps": true
+  },
+  {
+    "exercise": "Isolated Triceps Extension",
+    "area": "Triceps",
+    "triceps": true
   },
   {
     "exercise": "Skullcrushers",
-    "area_id": 9
+    "area": "Triceps",
+    "triceps": true
   },
   {
-    "exercise": "Cable pushdowns",
-    "area_id": 9
+    "exercise": "Cable Pushdowns",
+    "area": "Triceps",
+    "triceps": true
   },
   {
-    "exercise": "Diamond press-up",
-    "area_id": 9
+    "exercise": "Diamond Press-up",
+    "area": "Triceps",
+    "triceps": true
   }
 ]

@@ -1,6 +1,7 @@
 <div class="schedule">
-    <h2 class="my-workout">{{capitalize name}}'S WORKOUT SCHEDULE</h2>
-    <!-- {{only populate if submit button is clicked}} -->
+  {{!-- {{capitalize name}} --}}
+    
+    <h2 class="my-workout">MY WORKOUT SCHEDULE</h2>
     
     <section class="populated-data d-flex flex-wrap justify-content-center">
       <div class="card text-center biggerBox" id="monday-reference">
@@ -8,8 +9,12 @@
           MONDAY
         </div>
         <div class="card-body">
-          <p class="card-text" id="monday-content"></p>
-          <button type="button" id="first-btn" class="btn btn-secondary delete-btn mt-5 hide">Delete</button>
+          {{#each schedule}}
+          {{#if mon}}
+          <p class="card-text" id="monday-content">{{area}}</p>
+          <a type="button" id="first-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+          {{/if}}
+          {{/each}}
         </div>
       </div>
 
@@ -18,8 +23,12 @@
             TUESDAY
           </div>
           <div class="card-body">
-            <p class="card-text" id="tuesday-content"></p>
-            <button type="button" id="second-btn" class="btn btn-secondary delete-btn mt-5 hide">Delete</button>
+            {{#each schedule}}
+            {{#if tue}}
+            <p class="card-text" id="tuesday-content">{{area}}</p>
+            <a type="button" id="second-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+            {{/if}}
+            {{/each}}
           </div>
         </div>
 
@@ -28,8 +37,13 @@
             WEDNESDAY
           </div>
           <div class="card-body">
-            <p class="card-text" id="wednesday-content"></p>
-            <button type="button" id="third-btn" class="btn btn-secondary delete-btn mt-5 hide">Delete</button>
+            {{#each schedule}}
+            {{#if wed}}
+            <p class="card-text" id="wednesday-content">{{area}}</p>
+            {{!-- <button type="button" id="third-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</button> --}}
+            <a type="button" id="third-btn" class="btn btn-secondary delete-btn mt-5 " href="/delete/{{this.id}}">Delete</a>
+            {{/if}}
+            {{/each}}
           </div>
         </div>
 
@@ -38,8 +52,12 @@
             THURSDAY
           </div>
           <div class="card-body">
-            <p class="card-text" id="thursday-content"></p>
-            <button type="button" id="fourth-btn" class="btn btn-secondary delete-btn mt-5 hide">Delete</button>
+            {{#each schedule}}
+            {{#if thurs}}
+            <p class="card-text" id="thursday-content">{{area}}</p>
+            <a type="button" id="fourth-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+            {{/if}}
+            {{/each}}
           </div>
         </div>
 
@@ -48,8 +66,12 @@
             FRIDAY
           </div>
           <div class="card-body">
-            <p class="card-text" id="friday-content"></p>
-            <button type="button" id="fifth-btn" class="btn btn-secondary delete-btn mt-5 hide">Delete</button>
+            {{#each schedule}}
+            {{#if fri}}
+            <p class="card-text" id="friday-content">{{area}}</p>
+            <a type="button" id="fifth-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+            {{/if}}
+            {{/each}}
           </div>
         </div>
 
@@ -58,8 +80,12 @@
             SATURDAY
           </div>
           <div class="card-body">
-            <p class="card-text" id="saturday-content"></p>
-            <button type="button" id="sixth-btn" class="btn btn-secondary delete-btn mt-5 hide">Delete</button>
+            {{#each schedule}}
+            {{#if sat}}
+            <p class="card-text" id="saturday-content">{{area}}</p>
+            <a type="button" id="sixth-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+            {{/if}}
+            {{/each}}
           </div> 
         </div>
 
@@ -68,15 +94,20 @@
             SUNDAY
           </div>
           <div class="card-body">
-            <p class="card-text" id="sunday-content"></p>
-            <button type="button" id="seventh-btn" class="btn btn-secondary delete-btn mt-5 hide">Delete</button>
+            {{#each schedule}}
+            {{#if sun}}
+            <p class="card-text" id="sunday-content">{{area}}
+            </p>
+            <a type="button" id="seventh-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+            {{/if}}
+            {{/each}}
           </div>
         </div>
     </section>
             
             <!-- Input data into their weekly schedule -->
     <section id="weekly-layout">
-      <form class="text-center">
+      <form class="text-center new-schedule-form">
         <div class="form-group headerSpacing">
           <label for="dayOfTheWeek" class="inputHeader">Day of the Week</label>
         </div>
@@ -84,6 +115,7 @@
         <div class="dropdown">
           <select name="selectDay" id="dropdownMenuLink">
             <!-- <option value="pleaseSelect" id="please-select">Select</option> -->
+            
             <option class="dayofweekSelect" value="monday" id="monday-select">Monday</option>
             <option class="dayofweekSelect" value="tuesday" id="tuesday-select">Tuesday</option>
             <option class="dayofweekSelect" value="wednesday" id="wednesday-select">Wednesday</option>
@@ -107,4 +139,5 @@
     </section>
 </div>
 
-<script src="/js/schedule.js"></script>
+{{!-- <script src="/js/schedule.js"></script> --}}
+<script src="/js/scheduleUpdate.js"></script>

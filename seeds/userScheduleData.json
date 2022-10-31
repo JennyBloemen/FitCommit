@@ -1,0 +1,37 @@
+[
+    {
+        "area" : "Chest and Abs",
+        "mon" : true,
+        "day" : "monday"
+    },
+    {
+        "area" : "Legs",
+        "tue" : true,
+        "day" : "tuesday"
+    },
+    {
+        "area" : "Shoulders",
+        "wed" : true,
+        "day" : "wednesday"
+    },
+    {
+        "area" : "Quads",
+        "thurs" : true,
+        "day" : "thursday"
+    },
+    {
+        "area" : "Biceps",
+        "fri" : true,
+        "day" : "friday"
+    },
+    {
+        "area" : "Triceps",
+        "sat" : true,
+        "day" : "saturday"
+    },
+    {
+        "area" : "Glutes",
+        "sun" : true,
+        "day" : "sunday"
+    }
+]
