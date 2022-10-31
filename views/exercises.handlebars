@@ -1,3 +1,4 @@
+{{!-- {{#if logged_in}} --}}
 <div class="exercises">
     <h2 class="browse-exercises">BROWSE EXERCISES</h2>
 
@@ -7,25 +8,24 @@
           <h3>CHEST</h3>
         </div>
         <div class="chest-exercises featured col-md">
-          <ul>
-            {{#if 1}}
-            {{#each area as |area|}}
-            <li>{{workouts.exercise}}</li>
-            {{/each}}
-            {{/if}}
+          <ul>      
+            {{#each exercises}}
+            {{#if chest}}
+            <li>{{exercise}}</li>
+            {{/if}}      
+            {{/each}}  
           </ul>
         </div>
-        
       </div>
       
       <div class="shoulders-section row">
         <div class="shoulder-exercises featured col-md">
           <ul>
-            {{#if 2}}
-            {{#each area as |area|}}
-            <li>{{workouts.exercise}}</li>
-            {{/each}}
-            {{/if}}
+            {{#each exercises}}
+            {{#if shoulders}}
+            <li>{{exercise}}</li>
+            {{/if}}      
+            {{/each}} 
           </ul>
         </div>
         <div class="shoulders title featured">
@@ -39,11 +39,11 @@
          </div>
          <div class="ab-exercises featured col-md">
            <ul>
-             {{#if 3}}
-            {{#each area as |area|}}
-            <li>{{workouts.exercise}}</li>
+            {{#each exercises}}
+            {{#if abs}}
+            <li>{{exercise}}</li>
+            {{/if}}      
             {{/each}}
-            {{/if}}
            </ul>
          </div>
         </div>
@@ -51,11 +51,11 @@
         <div class="quads-section row">
          <div class="quad-exercises featured col-md">
            <ul>
-            {{#if 4}}
-            {{#each area as |area|}}
-            <li>{{workouts.exercise}}</li>
+            {{#each exercises}}
+            {{#if quads}}
+            <li>{{exercise}}</li>
+            {{/if}}      
             {{/each}}
-            {{/if}}
            </ul>
          </div>
          <div class="quads title featured">
@@ -69,11 +69,11 @@
           </div>
           <div class="glute-exercises featured col-md">
             <ul>
-            {{#if 5}}
-            {{#each area as |area|}}
-            <li>{{workouts.exercise}}</li>
+            {{#each exercises}}
+            {{#if glutes}}
+            <li>{{exercise}}</li>
+            {{/if}}      
             {{/each}}
-            {{/if}}
             </ul>
           </div>
         </div>
@@ -81,11 +81,11 @@
         <div class="hamstring-section row">
           <div class="hamstring-exercises featured col-md">
             <ul>
-            {{#if 6}}
-            {{#each area as |area|}}
-            <li>{{workouts.exercise}}</li>
+            {{#each exercises}}
+            {{#if hamstrings}}
+            <li>{{exercise}}</li>
+            {{/if}}      
             {{/each}}
-            {{/if}}
             </ul>
           </div>
           <div class="hamstrings title featured">
@@ -94,16 +94,16 @@
         </div>
          
         <div class="back-section row">
-          <div class="back title featured">
+          <div class="back title featured"> 
             <h3>BACK</h3>
           </div>
           <div class="back-exercises featured col-md">
             <ul>
-            {{#if 7}}
-            {{#each area as |area|}}
-            <li>{{workouts.exercise}}</li>
+            {{#each exercises}}
+            {{#if back}}
+            <li>{{exercise}}</li>
+            {{/if}}      
             {{/each}}
-            {{/if}}
             </ul>
           </div>
         </div>
@@ -111,11 +111,11 @@
         <div class="biceps-section row">
           <div class="biceps-exercises featured col-md">
             <ul>
-            {{#if 8}}
-            {{#each area as |area|}}
-            <li>{{workouts.exercise}}</li>
+            {{#each exercises}}
+            {{#if biceps}}
+            <li>{{exercise}}</li>
+            {{/if}}      
             {{/each}}
-            {{/if}}
             </ul>
           </div>
           <div class="biceps title featured">
@@ -129,11 +129,11 @@
           </div>
           <div class="triceps-exercises featured col-md">
             <ul>
-            {{#if 9}}
-            {{#each area as |area|}}
-            <li>{{workouts.exercise}}</li>
+            {{#each exercises}}
+            {{#if triceps}}
+            <li>{{exercise}}</li>
+            {{/if}}      
             {{/each}}
-            {{/if}}
             </ul>
           </div>
         </div>
@@ -145,5 +145,7 @@
         <button type="button" class="btn btn-dark schedule-btn">Schedule</button>
       </div>
 </div>
+{{!-- {{else}}
+<a href="/login">You must login first to view the exercise library</a>
+{{#/if}} --}}
 
-<script src="/js/exercises.js"></script>

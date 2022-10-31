@@ -1,9 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// Might rename to Day
 class Schedule extends Model {}
   
-
+// Would be day.init...
 Schedule.init(
   {
     id: {
@@ -12,15 +13,42 @@ Schedule.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    day: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      
-    }, 
     area: {
       type: DataTypes.STRING,
       allowNull: true,
     },
+    day: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    mon: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+    }, 
+    tue: {
+        type: DataTypes.BOOLEAN,
+        allowNull: true,
+      }, 
+    wed: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+    }, 
+    thurs: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+    }, 
+    fri: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+    }, 
+    sat: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+    }, 
+    sun: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+    }, 
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -29,14 +57,14 @@ Schedule.init(
       },
     }
   },
-
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,  //need to look up
+    underscored: true,  
     modelName: 'schedule',
   }
 );
 
 module.exports = Schedule;
+
