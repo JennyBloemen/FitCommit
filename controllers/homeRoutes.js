@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Schedule } = require('../models');
+const { User, Schedule, Exercise, Workouts } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Prevent non logged in users from viewing the homepage
@@ -12,80 +12,35 @@ router.get('/', (req, res) => {
   });
 });
 
-
-// attempted to edit this route, still not working
-// Route to render the users workout schedule
-
-
-// router.get('/schedule:id', withAuth, async (req, res) => {
-// try {
-//   const scheduleData = awai.findByPk(req.params.id, {
-//     attributes: { exclude: ['password'] },
-//     include: [
-//       {
-//         model: User,
-//         attributes: [
-//           'name',
-//           'day',
-//           'area',
-//       ],
-//         // order: [['name', 'ASC']],
-//       }
-//     ]
-//   });
-
-
-router.get('/schedule', withAuth, async (req, res) => {
-// try {
-//   const scheduleData = await Schedule.findByPk(req.params.user_id, {
-//     attributes: { exclude: ['password'] },
-//     include: [
-//       {
-//         model: User,
-//         attributes: ['name'],
-//         // order: [['name', 'ASC']],
-//       }
-//     ]
-//   });
-
-//   const schedule = scheduleData.get({ plain: true });
-
-  res.render('schedule', {
-    // ...schedule,
-    // logged_in: true,
-    title: 'Schedule',
-    style: 'schedule.css',
-  });
-// } catch (err) {
-//   res.status(500).json(err);
-// }
-});
-
-
-// // Route to render exercises
-router.get('/exercises', withAuth, async (req, res) => {
+// get one user's schedule
+// withAuth,
+router.get('/schedule', async (req, res) => {
 try {
-    const exerciseData = await User.findAll({
-      include: [
+  const scheduleData = await Schedule.findAll({
+    include: [
       {
-        attributes: [
-          'exercise',
-          'area',
-          'chest',
-        ],
+        model: User,
+        attributes: ['name'],
       }
     ]
   });
 
-  const exercises = exerciseData.map((exercise) => exercise.get({ plain: true }));
+  if (!scheduleData) {
+    res.status(404).json({ message: 'No schedule for this user!' });
+    return;
+  }
 
-  res.render('exercises', {
-    User,
-    // Pass the logged in flag to the template
-    logged_in: true,
-    title: 'Exercises',
-    style: 'exercises.css',
-  });
+  const schedule = scheduleData.map((day) => day.get({ plain: true }));
+  // console.log(schedule);
+
+  res.render('schedule',
+   {
+    schedule,
+    logged_in: req.session.logged_in,
+    title: 'Schedule',
+    style: 'schedule.css',
+  }
+  );
 } catch (err) {
   res.status(500).json(err);
 }
@@ -94,15 +49,15 @@ try {
 // // Route to render exercises
 router.get('/exercises', withAuth, async (req, res) => {
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+    const workoutData = await Workouts.findAll()
+    .catch((err) => {
+      res.json(err);
     });
   
-    const users = userData.map((project) => project.get({ plain: true }));
-  
+    const exercises = workoutData.map((exercise) => exercise.get({ plain: true }));
+    // console.log(exercises);
     res.render('exercises', {
-      User,
+      exercises,
       // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
       title: 'Exercises',
@@ -112,11 +67,6 @@ router.get('/exercises', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
   });
-  
-
-
-
-
 
 
 router.get('/login', (req, res) => {

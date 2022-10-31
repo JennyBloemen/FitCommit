@@ -1,23 +1,37 @@
 [
     {
-        "mon" : "Chest and Abs"
+        "area" : "Chest and Abs",
+        "mon" : true,
+        "day" : "monday"
     },
     {
-        "tue" : "Legs"
+        "area" : "Legs",
+        "tue" : true,
+        "day" : "tuesday"
     },
     {
-        "wed" : "Shoulders"
+        "area" : "Shoulders",
+        "wed" : true,
+        "day" : "wednesday"
     },
     {
-        "thur" : "Quads"
+        "area" : "Quads",
+        "thurs" : true,
+        "day" : "thursday"
     },
     {
-        "fri" : "Biceps"
+        "area" : "Biceps",
+        "fri" : true,
+        "day" : "friday"
     },
     {
-        "sat" : "Triceps"
+        "area" : "Triceps",
+        "sat" : true,
+        "day" : "saturday"
     },
     {
-        "sun" : "Glutes"
+        "area" : "Glutes",
+        "sun" : true,
+        "day" : "sunday"
     }
 ]

@@ -31,199 +31,244 @@
     },
     {
       "exercise": "Side Lateral Raise",
-      "area" : "Shoulders"
+      "area" : "Shoulders",
+      "shoulders" : true
     },
     {
       "exercise": "Shoulder Stretch",
-      "area" : "Shoulders"
+      "area" : "Shoulders",
+      "shoulders" : true
     },
     {
       "exercise": "Front Raise",
-      "area" : "Shoulders"
+      "area" : "Shoulders",
+      "shoulders" : true
     },
     {
       "exercise": "Overhead Press",
-      "area" : "Shoulders"
+      "area" : "Shoulders",
+      "shoulders" : true
     },
     {
       "exercise": "Reverse Fly",
-      "area" : "Shoulders"
+      "area" : "Shoulders",
+      "shoulders" : true
     },
     {
       "exercise": "Dumbbell Shoulder Press",
-      "area" : "Shoulders"
+      "area" : "Shoulders",
+      "shoulders" : true
     },
     {
       "exercise": "Crunches",
-      "area" : "Abs"
+      "area" : "Abs",
+      "abs" : true
     },
     {
       "exercise": "Flutter Kicks",
-      "area" : "Abs"
+      "area" : "Abs",
+      "abs" : true
     },
     {
       "exercise": "Sitting Twists",
-      "area" : "Abs"
+      "area" : "Abs",
+      "abs" : true
     },
     {
       "exercise": "Half Wipers",
-      "area" : "Abs"
+      "area" : "Abs",
+      "abs" : true
     },
     {
       "exercise": "Elbow Plank",
-      "area" : "Abs"
+      "area" : "Abs",
+      "abs" : true
     },
     {
       "exercise": "Leg Raises",
-      "area" : "Abs"
+      "area" : "Abs",
+      "abs" : true
     },
     {
       "exercise": "Goblet Squat",
-      "area" : "Quads"
+      "area" : "Quads",
+      "quads": true
     },
     {
       "exercise": "Bulgarian Split Squat",
-      "area" : "Quads"
+      "area" : "Quads",
+      "quads": true
     },
     {
       "exercise": "Forward Lunge",
-      "area" : "Quads"
+      "area" : "Quads",
+      "quads": true
     },
     {
       "exercise": "Kneeling Leg Extension",
-      "area" : "Quads"
+      "area" : "Quads",
+      "quads": true
     },
     {
       "exercise": "Lateral Lunge",
-      "area" : "Quads"
+      "area" : "Quads",
+      "quads": true
     },
     {
       "exercise": "Box Jump",
-      "area" : "Quads"
+      "area" : "Quads",
+      "quads": true
     },
     {
       "exercise": "Step Downs",
-      "area" : "Glutes"
+      "area" : "Glutes",
+      "glutes" : true
     },
     {
       "exercise": "Back Squat",
-      "area" : "Glutes"
+      "area" : "Glutes",
+      "glutes" : true
     },
     {
       "exercise": "Deadlift",
-      "area" : "Glutes"
+      "area" : "Glutes",
+      "glutes" : true
     },
     {
       "exercise": "Lateral lunge",
-      "area" : "Glutes"
+      "area" : "Glutes",
+      "glutes" : true
     },
     {
       "exercise": "Barbell Hip Thrust",
-      "area" : "Glutes"
+      "area" : "Glutes",
+      "glutes" : true
     },
     {
       "exercise": "Modified Curtsy Lunge",
-      "area" : "Glutes"
-    },
-    {
-      "exercise": "Walking Lunge",
-      "area" : "Glutes"
+      "area" : "Glutes",
+      "glutes" : true
     },
     {
       "exercise": "Good Morning",
-      "area" : "Hamstrings"
+      "area" : "Hamstrings",
+      "hamstrings" : true
     },
     {
       "exercise": "Sumo Deadlift",
-      "area" : "Hamstrings"
+      "area" : "Hamstrings",
+      "hamstrings" : true
     },
     {
       "exercise": "Romanian Deadlift",
-      "area" : "Hamstrings"
+      "area" : "Hamstrings",
+      "hamstrings" : true
     },
     {
       "exercise": "Kettlebell Swing",
-      "area" : "Hamstrings"
+      "area" : "Hamstrings",
+      "hamstrings" : true
     },
     {
       "exercise": "Sumo Squat",
-      "area" : "Hamstrings"
+      "area" : "Hamstrings",
+      "hamstrings" : true
     },
     {
       "exercise": "Single-Leg Deadlift",
-      "area" : "Hamstrings"
+      "area" : "Hamstrings",
+      "hamstrings" : true
     },
     {
       "exercise": "Single-Arm Lat Row",
-      "area" : "Back"
+      "area" : "Back",
+      "back" : true
     },
     {
       "exercise": "Seated Cable Row",
-      "area" : "Back"
+      "area" : "Back",
+      "back" : true
     },
     {
       "exercise": "Lat Pulldowns",
-      "area" : "Back"
+      "area" : "Back",
+      "back" : true
     },
     {
       "exercise": "Dumbbell pullover",
-      "area" : "Back"
+      "area" : "Back",
+      "back" : true
     },
     {
       "exercise": "Face Pulls",
-      "area" : "Back"
+      "area" : "Back",
+      "back" : true
     },
     {
       "exercise": "Bentover Row",
-      "area" : "Back"
+      "area" : "Back",
+      "back" : true
     },
     {
       "exercise": "In and Out Curls",
-      "area" : "Biceps"
+      "area" : "Biceps",
+      "biceps" : true
     },
     {
       "exercise": "Hammer Curl",
-      "area" : "Biceps"
+      "area" : "Biceps",
+      "biceps" : true
     },
     {
       "exercise": "Preacher Curl",
-      "area" : "Biceps"
+      "area" : "Biceps",
+      "biceps" : true
     },
     {
       "exercise": "Cross Body Hammer Curl",
-      "area" : "Biceps"
+      "area" : "Biceps",
+      "biceps" : true
     },
     {
       "exercise": "Concentration Curl",
-      "area" : "Biceps"
+      "area" : "Biceps",
+      "biceps" : true
     },
     {
       "exercise": "Reverse Barbell Curl",
-      "area" : "Biceps"
+      "area" : "Biceps",
+      "biceps" : true
     },
-  
     {
       "exercise": "Close-grip Bench Press",
-      "area" : "Triceps"
+      "area" : "Triceps",
+      "triceps" : true
     },
     {
       "exercise": "Tricep Dips",
-      "area" : "Triceps"
+      "area" : "Triceps",
+      "triceps" : true
     },
     {
       "exercise": "Isolated Triceps Extension",
-      "area" : "Triceps"
+      "area" : "Triceps",
+      "triceps" : true
     },
     {
       "exercise": "Skullcrushers",
-      "area" : "Triceps"
+      "area" : "Triceps",
+      "triceps" : true
     },
     {
       "exercise": "Cable Pushdowns",
-      "area" : "Triceps"
+      "area" : "Triceps",
+      "triceps" : true
     },
     {
       "exercise": "Diamond Press-up",
-      "area" : "Triceps"
+      "area" : "Triceps",
+      "triceps" : true
     }
   ]
+
+

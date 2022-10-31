@@ -1,97 +1,157 @@
-// const router = require('express').Router();
-// const { User, Schedule, userSchedule } = require('../../models');
-// const withAuth = require('../../utils/auth');
+const router = require('express').Router();
+const { User, Schedule } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 
-// // post request to get schedule pulled up 
-// // referencing userSchedule (new schedule model)
-// // post or put -- try both
-// // TA'S WAY ... not finished yet
+// specific put route for monday
+// withAuth,
+router.put('/', async (req, res) => {
+  try {
+    const newSchedule = await Schedule.update(
+        // want to update the area
+        {
+          area: req.body.area
+        },
+        // where the request is for monday
+        {
+          where: {
+            day: req.params.day,
+          }
+        }
+    );
+    console.log(newSchedule);
 
-// // router.put('/schedule', withAuth, async (req, res) => {
-//     // try {
-//     //   const scheduleData = await Schedule.update({
-//     //     where: {
-//     //       user_id: req.body.user_id,
-//     //       where: {
-//     //         // ?? select the day 
-//     //       },
-//     //     },
-//     //     day: req.body.day,
-//     //     area: req.body.area,
-//     //   });
-  
-// //       // set up sessions
-// //       req.session.save(() => {
-// //         req.session.logged_in = true;
-// //         // console.log this and try logged_in as well
-// //         console.log(req.session);
-// //         res.status(200).json(scheduleData);
-// //       })
-  
-// //     } catch (err) {
-// //       console.log(err);
-// //       res.status(500).json(err);
-// //     }
-// //   })
+    res.status(200).json(newSchedule);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 
+// delete button for day on schedule
+router.delete('/', withAuth, async (req, res) => {
+  try {
+    const scheduleData = await Schedule.destroy({
+      where: {
+        day: req.params.day,
+      },
+    });
 
-// // MY WAY...testing 
-//   router.post('/schedule', withAuth, async (req, res) => {
+    if (!scheduleData) {
+      res.status(404).json({ message: 'No data with this day!' });
+      return;
+    }
+
+    res.status(200).json(scheduleData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+module.exports = router;
+
+// specific put route for tuesday
+// router.put('/:tue', withAuth, async (req, res) => {
 //     try {
-//       const scheduleData = await userSchedule.create({
-//         ...req.body,
-//         user_id: req.session.user_id,
-//       });
+//       const newSchedule = await Schedule.update(
+//           // want to update the area
+//           {area: req.body.area},
+//           // where the request is for tuesday
+//           {where: req.params.tue}
+//       );
   
-//       res.status(200).json(scheduleData);
+//       res.status(200).json(newSchedule);
 //     } catch (err) {
-//       console.log(err);
-//       res.status(500).json(err);
+//       res.status(400).json(err);
 //     }
 //   });
 
-// //   another way ... testing
-// router.put('/schedule', withAuth, async (req, res) => {
+//   // specific put route for wednesday
+// router.put('/:wed', withAuth, async (req, res) => {
 //     try {
-
-//         const scheduleData = await userSchedule.update({
-//           where: {
-//             user_id: req.body.user_id,
-            
-//           },
-//           day: req.body.day,
-//           area: req.body.area,
-//         });
+//       const newSchedule = await Schedule.update(
+//           // want to update the area
+//           {area: req.body.area},
+//           // where the request is for wednesday
+//           {where: req.params.wed}
+//       );
   
-//       res.status(200).json(scheduleData);
+//       res.status(200).json(newSchedule);
 //     } catch (err) {
-//       console.log(err);
-//       res.status(500).json(err);
+//       res.status(400).json(err);
 //     }
 //   });
 
-
-//   router.delete('/schedule/:id', withAuth, async (req, res) => {
+//   // specific put route for thursday
+// router.put('/:thurs', withAuth, async (req, res) => {
 //     try {
-//         const scheduleData = await Schedule.destroy({
-//             where: {
-//                 id: req.params.id,
-//                 user_id: req.session.user_id,
-//             },
-//         });
-//         if (!scheduleData) {
-//             // TURN INTO SWAL ALERT???
-//             res.status(404).json({ message: 'No schedule found with this id!' });
-//             return;
-//         }
-
-//         res.status(200).json(scheduleData);
+//       const newSchedule = await Schedule.update(
+//           // want to update the area
+//           {area: req.body.area},
+//           // where the request is for thursday
+//           {where: req.params.thurs}
+//       );
+  
+//       res.status(200).json(newSchedule);
 //     } catch (err) {
-//         res.status(500).json(err);
+//       res.status(400).json(err);
 //     }
 //   });
 
 
-// module.exports = router;
+//    // specific put route for friday
+// router.put('/:fri', withAuth, async (req, res) => {
+//     try {
+//       const newSchedule = await Schedule.update(
+//           // want to update the area
+//           {area: req.body.area},
+//           // where the request is for friday
+//           {where: req.params.fri}
+//       );
+  
+//       res.status(200).json(newSchedule);
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   });
+
+//    // specific put route for saturday
+// router.put('/:sat', withAuth, async (req, res) => {
+//     try {
+//       const newSchedule = await Schedule.update(
+//           // want to update the area
+//           {area: req.body.area},
+//           // where the request is for saturday
+//           {where: req.params.sat}
+//       );
+  
+//       res.status(200).json(newSchedule);
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   });
+
+//    // specific put route for sunday
+// router.put('/:sun', withAuth, async (req, res) => {
+//     try {
+//       const newSchedule = await Schedule.update(
+//           // want to update the area
+//           {area: req.body.area},
+//           // where the request is for sunday
+//           {where: req.params.sun}
+//       );
+  
+//       res.status(200).json(newSchedule);
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   });
+
+
+
+
+
+
+
+
+
