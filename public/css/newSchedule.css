@@ -81,9 +81,26 @@ main {
     font-size: 1.2rem;
 }
 
-.delete-btn {
+.absolute {
+    position: relative;
+}
+
+.delete-btn{
     font-size: 1rem;
-    width: 70%;
+    width: 40%;
+    position: absolute;
+    top: 220px;
+    bottom: 10px; 
+    right: 17px;
+}
+
+.add-btn{
+    font-size: 1rem;
+    width: 40%;
+    position: absolute;
+    top: 220px;
+    bottom: 10px; 
+    left: 17px;
 }
 
 .browse-btn {
@@ -109,6 +126,7 @@ main {
 
 .biggerBox {
     width: 13rem;
+    margin: .5rem;
 }
 
 .populated-data {
@@ -121,8 +139,10 @@ main {
     font-weight: bold;
 }
 
+
 .card {
-    height: 16rem;
+    height: 20rem;
+    width: 16rem;
 }
 
 .buttons-schedule {

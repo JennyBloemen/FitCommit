@@ -1,22 +1,24 @@
 const sequelize = require("../config/connection");
-const { User, Workouts, Area } = require("../models");
+const { User, Workouts, Schedule } = require("../models");
 
 const userData = require("./userData.json");
-const workoutData = require("./workoutData.json");
-const areaData = require("./areaData.json");
+const workoutData = require("./exerciseData.json");
+const scheduleData = require("./userScheduleData.json");
+
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-
 
   await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
 
-  await Area.bulkCreate(areaData);
+
+  await Schedule.bulkCreate(scheduleData);
 
   await Workouts.bulkCreate(workoutData);
+
   process.exit(0);
 };
 
