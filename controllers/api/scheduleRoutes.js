@@ -1,9 +1,6 @@
 const router = require('express').Router();
 const { User, Schedule } = require('../../models');
 const withAuth = require('../../utils/auth');
-
-
-// HOW DOES IT KNOW WHICH PUT ROUTE TO USE? 
  
 // updates data on the calendar with user input
 router.put('/', async (req, res) => {

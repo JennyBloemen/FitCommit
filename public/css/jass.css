@@ -22,6 +22,10 @@ main {
   position: relative;
 }
 
+#home-link{
+  color: white;
+}
+
 .fit-homepage {
   display: flex;
   justify-content: center;

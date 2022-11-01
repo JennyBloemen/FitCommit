@@ -31,8 +31,9 @@ try {
       return;
     }
 
+    // serialize the data so the template can read it 
     const schedule = scheduleData.map((day) => day.get({ plain: true }));
-    // console.log(schedule);
+    console.log(schedule);
 
     res.render("schedule", {
       schedule,

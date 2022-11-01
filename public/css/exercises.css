@@ -18,6 +18,10 @@ main {
     position: relative;
 }
 
+#exercises-link {
+    color: white;
+}
+
 .nav-color {
     background-color: black;
     height: 4.5rem;

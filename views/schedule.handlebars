@@ -1,17 +1,18 @@
 <div class="schedule">
   {{!-- {{capitalize name}} --}}
-    
-    <h2 class="my-workout">MY WORKOUT SCHEDULE</h2>
+
+    <h2 class="my-workout">{{capitalize schedule.[0].user.name}}'S WORKOUT SCHEDULE</h2>
+
     
     <section class="populated-data d-flex flex-wrap justify-content-center">
       <div class="card text-center biggerBox" id="monday-reference">
         <div class="card-header">
           MONDAY
         </div>
-        <div class="card-body">
+        <div class="card-body absolutely">
           {{#each schedule}}
           {{#if mon}}
-          <p class="card-text" id="monday-content">{{area}}</p>
+          <p class="card-text userinputContent" id="monday-content">{{area}}</p>
           <button type="button" id="first-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
           {{/if}}
           {{/each}}
@@ -22,10 +23,10 @@
           <div class="card-header">
             TUESDAY
           </div>
-          <div class="card-body">
+          <div class="card-body absolutely">
             {{#each schedule}}
             {{#if tue}}
-            <p class="card-text" id="tuesday-content">{{area}}</p>
+            <p class="card-text userinputContent" id="tuesday-content">{{area}}</p>
             <button type="button" id="second-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}
             {{/each}}
@@ -36,10 +37,10 @@
           <div class="card-header">
             WEDNESDAY
           </div>
-          <div class="card-body">
+          <div class="card-body absolutely">
             {{#each schedule}}
             {{#if wed}}
-            <p class="card-text" id="wednesday-content">{{area}}</p>
+            <p class="card-text userinputContent" id="wednesday-content">{{area}}</p>
             <button type="button" id="third-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}
             {{/each}}
@@ -50,10 +51,10 @@
           <div class="card-header">
             THURSDAY
           </div>
-          <div class="card-body">
+          <div class="card-body absolutely">
             {{#each schedule}}
             {{#if thurs}}
-            <p class="card-text" id="thursday-content">{{area}}</p>
+            <p class="card-text userinputContent" id="thursday-content">{{area}}</p>
             <button type="button" id="fourth-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}
             {{/each}}
@@ -64,10 +65,10 @@
           <div class="card-header">
             FRIDAY
           </div>
-          <div class="card-body">
+          <div class="card-body absolutely">
             {{#each schedule}}
             {{#if fri}}
-            <p class="card-text" id="friday-content">{{area}}</p>
+            <p class="card-text userinputContent" id="friday-content">{{area}}</p>
             <button type="button" id="fifth-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}
             {{/each}}
@@ -78,10 +79,10 @@
           <div class="card-header">
             SATURDAY
           </div>
-          <div class="card-body">
+          <div class="card-body absolutely">
             {{#each schedule}}
             {{#if sat}}
-            <p class="card-text" id="saturday-content">{{area}}</p>
+            <p class="card-text userinputContent" id="saturday-content">{{area}}</p>
             <button type="button" id="sixth-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}
             {{/each}}
@@ -92,10 +93,10 @@
           <div class="card-header">
             SUNDAY
           </div>
-          <div class="card-body">
+          <div class="card-body absolutely">
             {{#each schedule}}
             {{#if sun}}
-            <p class="card-text" id="sunday-content">{{area}}
+            <p class="card-text userinputContent" id="sunday-content">{{area}}
             </p>
             <button type="button" id="seventh-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}

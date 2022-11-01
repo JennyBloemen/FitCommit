@@ -26,8 +26,31 @@ const sunDelete = document.querySelector('#seventh-btn');
 //   if (mondayContent) {
 //     monDelete.classList.remove('hide');
 //   }
-// }
 
+//   if (tuesdayContent) {
+//     tueDelete.classList.remove('hide');
+//   }
+
+//   if (wednesdayContent) {
+//     wedDelete.classList.remove('hide');
+//   }
+
+//   if (thursdayContent) {
+//     thurDelete.classList.remove('hide');
+//   }
+
+//   if (fridayContent) {
+//     friDelete.classList.remove('hide');
+//   }
+
+//   if (saturdayContent) {
+//     satDelete.classList.remove('hide');
+//   }
+
+//   if (sundayContent) {
+//     sunDelete.classList.remove('hide');
+//   }
+// }
 
 
 const newFormHandler = async (event) => {
@@ -38,7 +61,7 @@ const newFormHandler = async (event) => {
 
 // Monday
     if (day === 'monday' && area) {
-      // monDelete.classList.remove('hide');
+      monDelete.classList.remove('hide');
       muscleGroupInput.value = '';
 
       // taking input from user and sending to controllers to handle the put request
@@ -226,7 +249,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/schedule');
       } else {
-        // monDelete.classList.remove('hide');
+        // tueDelete.classList.remove('hide');
         alert('Failed to delete Tuesday data');
       }
     }
@@ -248,7 +271,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/schedule');
       } else {
-        // monDelete.classList.remove('hide');
+        // wedDelete.classList.remove('hide');
         alert('Failed to delete Wednesday data');
       }
     }
@@ -270,7 +293,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/schedule');
       } else {
-        // monDelete.classList.remove('hide');
+        // thurDelete.classList.remove('hide');
         alert('Failed to delete Thursday data');
       }
     }           
@@ -292,7 +315,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/schedule');
       } else {
-        // monDelete.classList.remove('hide');
+        // friDelete.classList.remove('hide');
         alert('Failed to delete Friday data');
       }
     }  
@@ -313,7 +336,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/schedule');
       } else {
-        // monDelete.classList.remove('hide');
+        // satDelete.classList.remove('hide');
         alert('Failed to delete Saturday data');
       }
     }
@@ -334,7 +357,7 @@ const newFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/schedule');
       } else {
-        // monDelete.classList.remove('hide');
+        // sunDelete.classList.remove('hide');
         alert('Failed to delete Sunday data');
       }
     }
