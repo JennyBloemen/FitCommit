@@ -8,16 +8,19 @@ const withAuth = require('../../utils/auth');
 router.put('/', async (req, res) => {
   console.log(req.body.area);
   console.log(req.body.day);
+  console.log('USER!!!!!!!', req.session.user_id);
   try {
     const newSchedule = await Schedule.update(
         // want to update the area
         {
-          area: req.body.area
+          area: req.body.area,
+          user_id: req.session.user_id,
         },
         // where the request is for monday
         {
           where: {
             day: req.body.day,
+            user_id: req.session.user_id,
           }
         }
     );

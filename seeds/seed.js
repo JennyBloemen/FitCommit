@@ -14,7 +14,6 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-
   await Schedule.bulkCreate(scheduleData);
 
   await Workouts.bulkCreate(workoutData);
