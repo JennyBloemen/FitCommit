@@ -29,7 +29,7 @@ const newFormHandler = async (event) => {
 
 // Monday
     if (day === 'monday' && area) {
-      // monDelete.classList.remove('hide');
+      monDelete.classList.remove('hide');
       muscleGroupInput.value = '';
       // taking input from user and sending to controllers to handle the put request
 
@@ -43,11 +43,12 @@ const newFormHandler = async (event) => {
   
       if (response.ok) {
         document.location.replace('/schedule');
+        monDelete.classList.remove('hide');
       } else {
         // SWEET ALERT?
+        monDelete.classList.add('hide');
         alert('Failed to update Monday');
       };
-      
     } 
     // Tuesday
     else if (day === 'tuesday' && area) {
@@ -290,8 +291,6 @@ const area = ' ';
         alert('Failed to delete Sunday data');
       }
     }
-  
-
 
 monDelete.addEventListener('click', mondayDelete);
 tueDelete.addEventListener('click', tuesdayDelete);

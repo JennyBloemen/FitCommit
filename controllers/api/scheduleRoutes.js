@@ -29,11 +29,8 @@ router.put('/', async (req, res) => {
   }
 });
 
-// DOESN'T WORK YET !!! 
-// delete button for day on schedule
-// ???????????
+// Delete route for each button 
 router.put('/', withAuth, async (req, res) => {
-
   try {
     const scheduleData = await Schedule.update(
       {
