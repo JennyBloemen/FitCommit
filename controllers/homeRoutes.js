@@ -30,7 +30,6 @@ try {
       res.status(404).json({ message: "No schedule for this user!" });
       return;
     }
-    console.log('HERE', scheduleData);
 
     const schedule = scheduleData.map((day) => day.get({ plain: true }));
     // console.log(schedule);

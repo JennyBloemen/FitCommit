@@ -6,9 +6,6 @@ const withAuth = require('../../utils/auth');
 // updates data on the calendar
 // withAuth,
 router.put('/', async (req, res) => {
-  console.log(req.body.area);
-  console.log(req.body.day);
-  console.log('USER!!!!!!!', req.session.user_id);
   try {
     const newSchedule = await Schedule.update(
         // want to update the area
@@ -35,16 +32,17 @@ router.put('/', async (req, res) => {
 // DOESN'T WORK YET !!! 
 // delete button for day on schedule
 // ???????????
-router.delete('/', withAuth, async (req, res) => {
-  console.log(req.body.area, req.body.day)
+router.put('/', withAuth, async (req, res) => {
+console.log('req DAYYYY', req.body.day);
   try {
-    const scheduleData = await Schedule.destroy(
+    const scheduleData = await Schedule.update(
       {
-        area: req.body.area
+        area: req.body.area,
       },
       {
       where: {
         day: req.body.day,
+        user_id: req.session.user_id,
       },
     }
     );
