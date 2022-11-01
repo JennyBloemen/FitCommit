@@ -2,36 +2,253 @@
     {
         "area" : "Chest and Abs",
         "mon" : true,
-        "day" : "monday"
+        "day" : "monday",
+        "user_id" : 6
     },
     {
         "area" : "Legs",
         "tue" : true,
-        "day" : "tuesday"
+        "day" : "tuesday",
+        "user_id" : 6
     },
     {
         "area" : "Shoulders",
         "wed" : true,
-        "day" : "wednesday"
+        "day" : "wednesday",
+        "user_id" : 6
     },
     {
         "area" : "Quads",
         "thurs" : true,
-        "day" : "thursday"
+        "day" : "thursday",
+        "user_id" : 6
     },
     {
         "area" : "Biceps",
         "fri" : true,
-        "day" : "friday"
+        "day" : "friday",
+        "user_id" : 6
     },
     {
         "area" : "Triceps",
         "sat" : true,
-        "day" : "saturday"
+        "day" : "saturday",
+        "user_id" : 6
     },
     {
         "area" : "Glutes",
         "sun" : true,
-        "day" : "sunday"
+        "day" : "sunday",
+        "user_id" : 6
+    },
+    {
+        "area" : "Chest and Abs",
+        "mon" : true,
+        "day" : "monday",
+        "user_id" : 1
+    },
+    {
+        "area" : "Legs",
+        "tue" : true,
+        "day" : "tuesday",
+        "user_id" : 1
+    },
+    {
+        "area" : "Shoulders",
+        "wed" : true,
+        "day" : "wednesday",
+        "user_id" : 1
+    },
+    {
+        "area" : "Quads",
+        "thurs" : true,
+        "day" : "thursday",
+        "user_id" : 1
+    },
+    {
+        "area" : "Biceps",
+        "fri" : true,
+        "day" : "friday",
+        "user_id" : 1
+    },
+    {
+        "area" : "Triceps",
+        "sat" : true,
+        "day" : "saturday",
+        "user_id" : 1
+    },
+    {
+        "area" : "Glutes",
+        "sun" : true,
+        "day" : "sunday",
+        "user_id" : 1
+    },
+    {
+        "area" : "Chest and Abs",
+        "mon" : true,
+        "day" : "monday",
+        "user_id" : 2
+    },
+    {
+        "area" : "Legs",
+        "tue" : true,
+        "day" : "tuesday",
+        "user_id" : 2
+    },
+    {
+        "area" : "Shoulders",
+        "wed" : true,
+        "day" : "wednesday",
+        "user_id" : 2
+    },
+    {
+        "area" : "Quads",
+        "thurs" : true,
+        "day" : "thursday",
+        "user_id" : 2
+    },
+    {
+        "area" : "Biceps",
+        "fri" : true,
+        "day" : "friday",
+        "user_id" : 2
+    },
+    {
+        "area" : "Triceps",
+        "sat" : true,
+        "day" : "saturday",
+        "user_id" : 2
+    },
+    {
+        "area" : "Glutes",
+        "sun" : true,
+        "day" : "sunday",
+        "user_id" : 2
+    },
+    {
+        "area" : "Chest and Abs",
+        "mon" : true,
+        "day" : "monday",
+        "user_id" : 3
+    },
+    {
+        "area" : "Legs",
+        "tue" : true,
+        "day" : "tuesday",
+        "user_id" : 3
+    },
+    {
+        "area" : "Shoulders",
+        "wed" : true,
+        "day" : "wednesday",
+        "user_id" : 3
+    },
+    {
+        "area" : "Quads",
+        "thurs" : true,
+        "day" : "thursday",
+        "user_id" : 3
+    },
+    {
+        "area" : "Biceps",
+        "fri" : true,
+        "day" : "friday",
+        "user_id" : 3
+    },
+    {
+        "area" : "Triceps",
+        "sat" : true,
+        "day" : "saturday",
+        "user_id" : 3
+    },
+    {
+        "area" : "Glutes",
+        "sun" : true,
+        "day" : "sunday",
+        "user_id" : 3
+    },
+    {
+        "area" : "Chest and Abs",
+        "mon" : true,
+        "day" : "monday",
+        "user_id" : 4
+    },
+    {
+        "area" : "Legs",
+        "tue" : true,
+        "day" : "tuesday",
+        "user_id" : 4
+    },
+    {
+        "area" : "Shoulders",
+        "wed" : true,
+        "day" : "wednesday",
+        "user_id" : 4
+    },
+    {
+        "area" : "Quads",
+        "thurs" : true,
+        "day" : "thursday",
+        "user_id" : 4
+    },
+    {
+        "area" : "Biceps",
+        "fri" : true,
+        "day" : "friday",
+        "user_id" : 4
+    },
+    {
+        "area" : "Triceps",
+        "sat" : true,
+        "day" : "saturday",
+        "user_id" : 4
+    },
+    {
+        "area" : "Glutes",
+        "sun" : true,
+        "day" : "sunday",
+        "user_id" : 4
+    },
+    {
+        "area" : "Chest and Abs",
+        "mon" : true,
+        "day" : "monday",
+        "user_id" : 5
+    },
+    {
+        "area" : "Legs",
+        "tue" : true,
+        "day" : "tuesday",
+        "user_id" : 5
+    },
+    {
+        "area" : "Shoulders",
+        "wed" : true,
+        "day" : "wednesday",
+        "user_id" : 5
+    },
+    {
+        "area" : "Quads",
+        "thurs" : true,
+        "day" : "thursday",
+        "user_id" : 5
+    },
+    {
+        "area" : "Biceps",
+        "fri" : true,
+        "day" : "friday",
+        "user_id" : 5
+    },
+    {
+        "area" : "Triceps",
+        "sat" : true,
+        "day" : "saturday",
+        "user_id" : 5
+    },
+    {
+        "area" : "Glutes",
+        "sun" : true,
+        "day" : "sunday",
+        "user_id" : 5
     }
 ]

@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Schedule } = require('../../models');
 
-//Creates a new user!!
+// Creates a new user!!
 router.post('/', async (req, res) => {
   try {
     console.log(req.body);
@@ -10,19 +10,65 @@ router.post('/', async (req, res) => {
       email: req.body.email,
       password: req.body.password,
     });
+    const user = dbUserData.get({ plain : true });
+    console.log('USER 1', user);
+
+    await Schedule.create({
+      area: '',
+      day: 'monday',
+      mon: true,
+      user_id: user.id,
+    });
+    await Schedule.create({
+      area: '',
+      day: 'tuesday',
+      tue: true,
+      user_id: user.id,
+    });
+    await Schedule.create({
+      area: '',
+      day: 'wednesday',
+      wed: true,
+      user_id: user.id,
+    });
+    await Schedule.create({
+      area: '',
+      day: 'thursday',
+      thurs: true,
+      user_id: user.id,
+    });
+    await Schedule.create({
+      area: '',
+      day: 'friday',
+      fri: true,
+      user_id: user.id,
+    });
+    await Schedule.create({
+      area: '',
+      day: 'saturday',
+      sat: true,
+      user_id: user.id,
+    });
+    await Schedule.create({
+      area: '',
+      day: 'sunday',
+      sun: true,
+      user_id: user.id,
+    });
 
     req.session.save(() => {
       req.session.logged_in = true;
-
+      req.session.user_id = user.id;
       res.status(200).json(dbUserData);
     });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-//Login's a user!!
+// Login's a user!!
 router.post('/login', async (req, res) => {
   try {
     // Find the user who matches the posted e-mail address

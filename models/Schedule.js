@@ -19,7 +19,8 @@ Schedule.init(
     },
     day: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+      defaultValue: '',
     },
     mon: {
       type: DataTypes.BOOLEAN,
