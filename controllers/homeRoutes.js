@@ -5,6 +5,7 @@ const withAuth = require("../utils/auth");
 // Prevent non logged in users from viewing the homepage
 router.get("/", (req, res) => {
   res.render("homepage", {
+    logged_in: req.session.logged_in,
     title: "FitCommit",
     style: "jass.css",
   });
