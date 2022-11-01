@@ -1,17 +1,20 @@
 /* styling sheet for the exercises page */
 
 :root {
-    --red-color: #df2c14;
+    --red-color: #ce1d06;
+    --dark-red: #460000;
     --light-background-grey: #f0f8ff;
     --font-body: 'Roboto', sans-serif;
     --bluez: #0e43a1;
+    --greyreal: #555454;
+    --darkgrey: #313131;
 }
 
 body { 
     margin: 0;
     box-sizing: border-box;
-    background-color: var(--light-background-grey);
-    color: white;
+    background-color: var(--greyreal);
+    color: var(--light-background-grey);
     font-family: var(--font-body);
 }
 
@@ -47,11 +50,11 @@ main {
 }
 
 .browse-exercises {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     letter-spacing: .03em;
     font-weight: bold;
     margin: 4rem;
-    color: black;
+    color: var(--light-background-grey);
 }
 
 .exercise-data {
@@ -60,9 +63,11 @@ main {
 }
 
 .btn {
-    font-size: 1.2rem;
-    margin: .3rem;
-    background-color: var(--red-color);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 5rem;
+    background-color: black;
 }
 
 .featured {
@@ -71,13 +76,16 @@ main {
     border-radius: 5px;
     margin: 2rem;
     padding: 2rem;
+    box-shadow: 0 0 8px 3px var(--dark-red);
 }
 
 .title {
     background-color: black;
+    box-shadow: 0 0 8px 3px rgb(51, 51, 51);
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--light-background-grey);
 }
 
 .title h3 {
