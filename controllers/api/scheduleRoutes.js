@@ -1,19 +1,17 @@
 const router = require('express').Router();
-const { User, Schedule } = require('../../models');
+const { Schedule } = require('../../models');
 const withAuth = require('../../utils/auth');
-
  
-// updates data on the calendar
-// withAuth,
-router.put('/', async (req, res) => {
+// Updates data on the calendar with the user's input
+router.put('/', withAuth, async (req, res) => {
   try {
     const newSchedule = await Schedule.update(
-        // want to update the area
+        // Updates the area
         {
           area: req.body.area,
           user_id: req.session.user_id,
         },
-        // where the request is for monday
+        // Where the request matches the day selected
         {
           where: {
             day: req.body.day,
@@ -21,7 +19,6 @@ router.put('/', async (req, res) => {
           }
         }
     );
-    console.log(newSchedule);
 
     res.status(200).json(newSchedule);
   } catch (err) {
@@ -29,11 +26,8 @@ router.put('/', async (req, res) => {
   }
 });
 
-// DOESN'T WORK YET !!! 
-// delete button for day on schedule
-// ???????????
+// PUT route to update calendar with an empty string for each delete button 
 router.put('/', withAuth, async (req, res) => {
-console.log('req DAYYYY', req.body.day);
   try {
     const scheduleData = await Schedule.update(
       {
@@ -57,6 +51,7 @@ console.log('req DAYYYY', req.body.day);
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;
 

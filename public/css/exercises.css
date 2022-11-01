@@ -1,3 +1,5 @@
+/* styling sheet for the exercises page */
+
 :root {
     --red-color: #df2c14;
     --light-background-grey: #f0f8ff;
@@ -16,6 +18,10 @@ body {
 main {
     margin: 1rem;
     position: relative;
+}
+
+#exercises-link {
+    color: white;
 }
 
 .nav-color {

@@ -3,7 +3,6 @@ const Schedule = require("./Schedule");
 const Workouts = require("./Workouts");
 
 User.hasMany(Schedule, {
-  //may need to be changed to hasone
   foreignKey: "user_id",
   onDelete: "CASCADE",
 });
