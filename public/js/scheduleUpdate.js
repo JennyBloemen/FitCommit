@@ -308,6 +308,8 @@ const newFormHandler = async (event) => {
       }
     }
   
+
+
 monDelete.addEventListener('click', mondayDelete);
 tueDelete.addEventListener('click', tuesdayDelete);
 wedDelete.addEventListener('click', wednesdayDelete);
@@ -317,6 +319,5 @@ satDelete.addEventListener('click', SaturdayDelete);
 sunDelete.addEventListener('click', sundayDelete);
 
 submitBtn.addEventListener('click', newFormHandler);
-  
 
 
