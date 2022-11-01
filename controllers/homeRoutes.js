@@ -13,8 +13,7 @@ router.get('/', (req, res) => {
 });
 
 // get one user's schedule
-// withAuth,
-router.get('/schedule', async (req, res) => {
+router.get('/schedule', withAuth, async (req, res) => {
 try {
   const scheduleData = await Schedule.findAll({
     include: [

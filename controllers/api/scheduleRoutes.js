@@ -2,10 +2,12 @@ const router = require('express').Router();
 const { User, Schedule } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-
-// specific put route for monday
+ 
+// updates data on the calendar
 // withAuth,
 router.put('/', async (req, res) => {
+  console.log(req.body.area);
+  console.log(req.body.day);
   try {
     const newSchedule = await Schedule.update(
         // want to update the area
@@ -15,7 +17,7 @@ router.put('/', async (req, res) => {
         // where the request is for monday
         {
           where: {
-            day: req.params.day,
+            day: req.body.day,
           }
         }
     );
@@ -27,15 +29,22 @@ router.put('/', async (req, res) => {
   }
 });
 
-
+// DOESN'T WORK YET !!! 
 // delete button for day on schedule
+// ???????????
 router.delete('/', withAuth, async (req, res) => {
+  console.log(req.body.area, req.body.day)
   try {
-    const scheduleData = await Schedule.destroy({
-      where: {
-        day: req.params.day,
+    const scheduleData = await Schedule.destroy(
+      {
+        area: req.body.area
       },
-    });
+      {
+      where: {
+        day: req.body.day,
+      },
+    }
+    );
 
     if (!scheduleData) {
       res.status(404).json({ message: 'No data with this day!' });

@@ -21,28 +21,28 @@ const friDelete = document.querySelector('#fifth-btn');
 const satDelete = document.querySelector('#sixth-btn');
 const sunDelete = document.querySelector('#seventh-btn');
 
+const area = muscleGroupInput.value.trim();
+const days = document.querySelector('#dropdownMenuLink');
+const day = days.options[days.selectedIndex].value.trim();
+
 
 const newFormHandler = async (event) => {
 
     event.preventDefault();
 
-    const area = muscleGroupInput.value.trim();
-    const days = document.querySelector('#dropdownMenuLink');
-    const day = days.options[days.selectedIndex].value.trim();
-
 // Monday
     if (day === 'monday' && area) {
-      monDelete.classList.remove('hide');
-
+      // monDelete.classList.remove('hide');
+      muscleGroupInput.value = '';
       // taking input from user and sending to controllers to handle the put request
+
       const response = await fetch('/api/schedule', {
         method: 'PUT',
         body: JSON.stringify({ day, area }),
         headers: {
           'Content-Type': 'application/json',
-        },
+        },     
       });
-      console.log(response);
   
       if (response.ok) {
         document.location.replace('/schedule');
@@ -52,28 +52,28 @@ const newFormHandler = async (event) => {
       };
 
       // delete content from monday if delete button is clicked
-      const mondayDelete = async () => {
-        monDelete.classList.add('hide');
-        
-        const response = await fetch('/api/schedule', {
-          method: 'DELETE',
-          body: JSON.stringify({ day, area }),
-          body: JSON.stringify({ day, area }),
-        });
+      // const mondayDelete = async () => {
+      //   // monDelete.classList.add('hide');
+      //   console.log('worked');
+      //   const response = await fetch('/api/schedule', {
+      //     method: 'DELETE',
+      //     body: JSON.stringify({ day, area }),
+      //   });
 
-        if (response.ok) {
-          document.location.replace('/schedule');
-        } else {
-          alert('Failed to delete Monday data');
-        }
-      }
+      //   if (response.ok) {
+      //     document.location.replace('/schedule');
+      //   } else {
+      //     alert('Failed to delete Monday data');
+      //   }
+      // }
     
-      monDelete.addEventListener('click', mondayDelete);
+      // monDelete.addEventListener('click', mondayDelete);
 
     } 
     // Tuesday
     else if (day === 'tuesday' && area) {
       tueDelete.classList.remove('hide');
+      muscleGroupInput.value = '';
         const response = await fetch(`/api/schedule`, {
             method: 'PUT',
             body: JSON.stringify({ day, area }),
@@ -87,29 +87,11 @@ const newFormHandler = async (event) => {
           } else {
             alert('Failed to update Tuesday');
           };
-
-          // tuesday delete button
-          const tuesdayDelete = async () => {
-            tueDelete.classList.add('hide');
-            
-            const response = await fetch('/api/schedule', {
-              method: 'DELETE',
-              body: JSON.stringify({ day, area }),
-            });
-    
-            if (response.ok) {
-              document.location.replace('/schedule');
-            } else {
-              alert('Failed to delete Tuesday data');
-            }
-          }
-        
-          tueDelete.addEventListener('click', tuesdayDelete);
-    
     }
     // Wednesday
     else if (day === 'wednesday' && area) {
       wedDelete.classList.remove('hide');
+      muscleGroupInput.value = '';
         const response = await fetch(`/api/schedule`, {
             method: 'PUT',
             body: JSON.stringify({ day, area }),
@@ -124,28 +106,11 @@ const newFormHandler = async (event) => {
             alert('Failed to update Wednesday');
           };
 
-
-          // wednesday delete button
-          const wednesdayDelete = async () => {
-            wedDelete.classList.add('hide');
-            
-            const response = await fetch('/api/schedule', {
-              method: 'DELETE',
-              body: JSON.stringify({ day, area }),
-            });
-    
-            if (response.ok) {
-              document.location.replace('/schedule');
-            } else {
-              alert('Failed to delete Wednesday data');
-            }
-          }
-        
-          wedDelete.addEventListener('click', wednesdayDelete);
     }
     // Thursday
     else if (day === 'thursday' && area) {
       thurDelete.classList.remove('hide');
+      muscleGroupInput.value = '';
         const response = await fetch(`/api/schedule`, {
             method: 'PUT',
             body: JSON.stringify({ day, area }),
@@ -159,28 +124,11 @@ const newFormHandler = async (event) => {
           } else {
             alert('Failed to update Thursday');
           };
-
-          // thursday delete button
-          const thursdayDelete = async () => {
-            thurDelete.classList.add('hide');
-            
-            const response = await fetch('/api/schedule', {
-              method: 'DELETE',
-              body: JSON.stringify({ day, area }),
-            });
-    
-            if (response.ok) {
-              document.location.replace('/schedule');
-            } else {
-              alert('Failed to delete Thursday data');
-            }
-          }
-        
-          thurDelete.addEventListener('click', thursdayDelete);
     }
     // Friday
     else if (day === 'friday' && area) {
       friDelete.classList.remove('hide');
+      muscleGroupInput.value = '';
         const response = await fetch(`/api/schedule`, {
             method: 'PUT',
             body: JSON.stringify({ day, area }),
@@ -195,27 +143,11 @@ const newFormHandler = async (event) => {
             alert('Failed to update Friday');
           };
 
-          // friday delete button
-          const fridayDelete = async () => {
-            friDelete.classList.add('hide');
-            
-            const response = await fetch('/api/schedule', {
-              method: 'DELETE',
-              body: JSON.stringify({ day, area }),
-            });
-    
-            if (response.ok) {
-              document.location.replace('/schedule');
-            } else {
-              alert('Failed to delete Friday data');
-            }
-          }
-        
-          friDelete.addEventListener('click', fridayDelete);
     }
     // Saturday
     else if (day === 'saturday' && area) {
       satDelete.classList.remove('hide');
+      muscleGroupInput.value = '';
         const response = await fetch(`/api/schedule`, {
             method: 'PUT',
             body: JSON.stringify({ day, area }),
@@ -230,27 +162,11 @@ const newFormHandler = async (event) => {
             alert('Failed to update Saturday');
           };
 
-          // saturday delete button
-          const SaturdayDelete = async () => {
-            satDelete.classList.add('hide');
-            
-            const response = await fetch('/api/schedule', {
-              method: 'DELETE',
-              body: JSON.stringify({ day, area }),
-            });
-    
-            if (response.ok) {
-              document.location.replace('/schedule');
-            } else {
-              alert('Failed to delete Saturday data');
-            }
-          }
-        
-          satDelete.addEventListener('click', SaturdayDelete);
     }
     // Sunday
     else if (day === 'sunday' && area) {
       sunDelete.classList.remove('hide');
+      muscleGroupInput.value = '';
         const response = await fetch(`/api/schedule`, {
             method: 'PUT',
             body: JSON.stringify({ day, area }),
@@ -264,52 +180,141 @@ const newFormHandler = async (event) => {
           } else {
             alert('Failed to create Sunday');
           };
-
-          // sunday delete button
-          const sundayDelete = async () => {
-            sunDelete.classList.add('hide');
-            
-            const response = await fetch('/api/schedule', {
-              method: 'DELETE',
-              body: JSON.stringify({ day, area }),
-            });
-    
-            if (response.ok) {
-              document.location.replace('/schedule');
-            } else {
-              alert('Failed to delete Sunday data');
-            }
-          }
-        
-          sunDelete.addEventListener('click', sundayDelete);
     }
   };
 
+// DELETE REQUESTS --  FOR ALL THE DELETE BUTTONS 
 
+    // delete content from monday if delete button is clicked
+    const mondayDelete = async () => {
+      monDelete.classList.add('hide');
+      console.log('worked');
+      const response = await fetch('/api/schedule', {
+        method: 'DELETE',
+        body: JSON.stringify({ day, area }),
+      });
+
+      if (response.ok) {
+        document.location.replace('/schedule');
+      } else {
+        monDelete.classList.remove('hide');
+      monDelete.classList.remove('hide');
+        alert('Failed to delete Monday data');
+      }
+    }
+
+    // tuesday delete button
+    const tuesdayDelete = async () => {
+      tueDelete.classList.add('hide');
+      
+      const response = await fetch('/api/schedule', {
+        method: 'DELETE',
+        body: JSON.stringify({ day, area }),
+      });
+
+      if (response.ok) {
+        document.location.replace('/schedule');
+      } else {
+        monDelete.classList.remove('hide');
+        alert('Failed to delete Tuesday data');
+      }
+    }
+
+    // wednesday delete button
+    const wednesdayDelete = async () => {
+      wedDelete.classList.add('hide');
+      
+      const response = await fetch('/api/schedule', {
+        method: 'DELETE',
+        body: JSON.stringify({ day, area }),
+      });
+
+      if (response.ok) {
+        document.location.replace('/schedule');
+      } else {
+        monDelete.classList.remove('hide');
+        alert('Failed to delete Wednesday data');
+      }
+    }
+        
+    // thursday delete button
+    const thursdayDelete = async () => {
+      thurDelete.classList.add('hide');
+      
+      const response = await fetch('/api/schedule', {
+        method: 'DELETE',
+        body: JSON.stringify({ day, area }),
+      });
+
+      if (response.ok) {
+        document.location.replace('/schedule');
+      } else {
+        monDelete.classList.remove('hide');
+        alert('Failed to delete Thursday data');
+      }
+    }
+                  
+
+// friday delete button
+    const fridayDelete = async () => {
+      friDelete.classList.add('hide');
+      
+      const response = await fetch('/api/schedule', {
+        method: 'DELETE',
+        body: JSON.stringify({ day, area }),
+      });
+
+      if (response.ok) {
+        document.location.replace('/schedule');
+      } else {
+        monDelete.classList.remove('hide');
+        alert('Failed to delete Friday data');
+      }
+    }
+        
+
+ // saturday delete button
+    const SaturdayDelete = async () => {
+      satDelete.classList.add('hide');
+      
+      const response = await fetch('/api/schedule', {
+        method: 'DELETE',
+        body: JSON.stringify({ day, area }),
+      });
+      if (response.ok) {
+        document.location.replace('/schedule');
+      } else {
+        monDelete.classList.remove('hide');
+        alert('Failed to delete Saturday data');
+      }
+    }
+
+
+  // sunday delete button
+    const sundayDelete = async () => {
+      sunDelete.classList.add('hide');
+      
+      const response = await fetch('/api/schedule/:id', {
+        method: 'DELETE',
+        body: JSON.stringify({ day, area }),
+      });
+      if (response.ok) {
+        document.location.replace('/schedule');
+      } else {
+        monDelete.classList.remove('hide');
+        alert('Failed to delete Sunday data');
+      }
+    }
   
-  // const delButtonHandler = async (event) => {
-  //   if (event.target.hasAttribute('data-id')) {
-  //     const id = event.target.getAttribute('data-id');
-  
-  //     const response = await fetch(`/api/schedule/${id}`, {
-  //       method: 'DELETE',
-  //     });
-  
-  //     if (response.ok) {
-  //       document.location.replace('/schedule');
-  //     } else {
-  //       alert('Failed to delete project');
-  //     }
-  //   }
-  // };
-  
-  // selecting the form vs the submit button for the form  . . . 
-  // document.querySelector('.new-schedule-form').addEventListener('click', newFormHandler);
+monDelete.addEventListener('click', mondayDelete);
+tueDelete.addEventListener('click', tuesdayDelete);
+wedDelete.addEventListener('click', wednesdayDelete);
+thurDelete.addEventListener('click', thursdayDelete);
+friDelete.addEventListener('click', fridayDelete);
+satDelete.addEventListener('click', SaturdayDelete);
+sunDelete.addEventListener('click', sundayDelete);
 
 submitBtn.addEventListener('click', newFormHandler);
   
-  // document
-  //   .querySelector('.delete-btn')
-  //   .addEventListener('click', delButtonHandler);
-  
+
 
