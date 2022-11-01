@@ -47,25 +47,7 @@ const newFormHandler = async (event) => {
         // SWEET ALERT?
         alert('Failed to update Monday');
       };
-
-      // delete content from monday if delete button is clicked
-      // const mondayDelete = async () => {
-      //   // monDelete.classList.add('hide');
-      //   console.log('worked');
-      //   const response = await fetch('/api/schedule', {
-      //     method: 'DELETE',
-      //     body: JSON.stringify({ day, area }),
-      //   });
-
-      //   if (response.ok) {
-      //     document.location.replace('/schedule');
-      //   } else {
-      //     alert('Failed to delete Monday data');
-      //   }
-      // }
-    
-      // monDelete.addEventListener('click', mondayDelete);
-
+      
     } 
     // Tuesday
     else if (day === 'tuesday' && area) {

@@ -33,7 +33,7 @@ router.put('/', async (req, res) => {
 // delete button for day on schedule
 // ???????????
 router.put('/', withAuth, async (req, res) => {
-console.log('req DAYYYY', req.body.day);
+
   try {
     const scheduleData = await Schedule.update(
       {
