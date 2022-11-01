@@ -21,11 +21,6 @@ const friDelete = document.querySelector('#fifth-btn');
 const satDelete = document.querySelector('#sixth-btn');
 const sunDelete = document.querySelector('#seventh-btn');
 
-const area = muscleGroupInput.value.trim();
-const days = document.querySelector('#dropdownMenuLink');
-const day = days.options[days.selectedIndex].value.trim();
-
-
 const newFormHandler = async (event) => {
     event.preventDefault();
     const area = muscleGroupInput.value.trim();
@@ -186,32 +181,38 @@ const newFormHandler = async (event) => {
   };
 
 // DELETE REQUESTS --  FOR ALL THE DELETE BUTTONS 
-
+const days = document.querySelector('#dropdownMenuLink');
+const day = days.options[days.selectedIndex].value.trim();
+const area = ' ';
     // delete content from monday if delete button is clicked
     const mondayDelete = async () => {
       monDelete.classList.add('hide');
-      console.log('worked');
+
       const response = await fetch('/api/schedule', {
-        method: 'DELETE',
+        method: 'PUT',
         body: JSON.stringify({ day, area }),
+        headers: {
+          "Content-Type" : "application/json",
+        },
       });
 
       if (response.ok) {
         document.location.replace('/schedule');
       } else {
         monDelete.classList.remove('hide');
-      monDelete.classList.remove('hide');
         alert('Failed to delete Monday data');
       }
     }
 
+    // figure out delete button hide
+    // UPDATE THESE BUTTONS PLEASE to be like MONDAY above ...
     // tuesday delete button
     const tuesdayDelete = async () => {
       tueDelete.classList.add('hide');
       
       const response = await fetch('/api/schedule', {
         method: 'DELETE',
-        body: JSON.stringify({ day, area }),
+        body: JSON.stringify({ day }),
       });
 
       if (response.ok) {
@@ -228,7 +229,7 @@ const newFormHandler = async (event) => {
       
       const response = await fetch('/api/schedule', {
         method: 'DELETE',
-        body: JSON.stringify({ day, area }),
+        body: JSON.stringify({ day }),
       });
 
       if (response.ok) {
@@ -245,7 +246,7 @@ const newFormHandler = async (event) => {
       
       const response = await fetch('/api/schedule', {
         method: 'DELETE',
-        body: JSON.stringify({ day, area }),
+        body: JSON.stringify({ day }),
       });
 
       if (response.ok) {
@@ -263,7 +264,7 @@ const newFormHandler = async (event) => {
       
       const response = await fetch('/api/schedule', {
         method: 'DELETE',
-        body: JSON.stringify({ day, area }),
+        body: JSON.stringify({ day }),
       });
 
       if (response.ok) {
@@ -281,7 +282,7 @@ const newFormHandler = async (event) => {
       
       const response = await fetch('/api/schedule', {
         method: 'DELETE',
-        body: JSON.stringify({ day, area }),
+        body: JSON.stringify({ day }),
       });
       if (response.ok) {
         document.location.replace('/schedule');
@@ -298,7 +299,7 @@ const newFormHandler = async (event) => {
       
       const response = await fetch('/api/schedule/:id', {
         method: 'DELETE',
-        body: JSON.stringify({ day, area }),
+        body: JSON.stringify({ day }),
       });
       if (response.ok) {
         document.location.replace('/schedule');
