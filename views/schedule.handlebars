@@ -12,7 +12,7 @@
           {{#each schedule}}
           {{#if mon}}
           <p class="card-text" id="monday-content">{{area}}</p>
-          <a type="button" id="first-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+          <button type="button" id="first-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
           {{/if}}
           {{/each}}
         </div>
@@ -26,7 +26,7 @@
             {{#each schedule}}
             {{#if tue}}
             <p class="card-text" id="tuesday-content">{{area}}</p>
-            <a type="button" id="second-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+            <button type="button" id="second-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}
             {{/each}}
           </div>
@@ -40,8 +40,8 @@
             {{#each schedule}}
             {{#if wed}}
             <p class="card-text" id="wednesday-content">{{area}}</p>
-            {{!-- <button type="button" id="third-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</button> --}}
-            <a type="button" id="third-btn" class="btn btn-secondary delete-btn mt-5 " href="/delete/{{this.id}}">Delete</a>
+            {{!-- <button type="button" id="third-btn" class="btn btn-secondary delete-btn mt-5" href="/delete/{{this.id}}">Delete</button> --}}
+            <button type="button" id="third-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}
             {{/each}}
           </div>
@@ -55,7 +55,7 @@
             {{#each schedule}}
             {{#if thurs}}
             <p class="card-text" id="thursday-content">{{area}}</p>
-            <a type="button" id="fourth-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+            <button type="button" id="fourth-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}
             {{/each}}
           </div>
@@ -69,7 +69,7 @@
             {{#each schedule}}
             {{#if fri}}
             <p class="card-text" id="friday-content">{{area}}</p>
-            <a type="button" id="fifth-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+            <button type="button" id="fifth-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}
             {{/each}}
           </div>
@@ -83,7 +83,7 @@
             {{#each schedule}}
             {{#if sat}}
             <p class="card-text" id="saturday-content">{{area}}</p>
-            <a type="button" id="sixth-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+            <button type="button" id="sixth-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}
             {{/each}}
           </div> 
@@ -98,7 +98,7 @@
             {{#if sun}}
             <p class="card-text" id="sunday-content">{{area}}
             </p>
-            <a type="button" id="seventh-btn" class="btn btn-secondary delete-btn mt-5 hide" href="/delete/{{this.id}}">Delete</a>
+            <button type="button" id="seventh-btn" class="btn btn-secondary delete-btn mt-5">Delete</button>
             {{/if}}
             {{/each}}
           </div>

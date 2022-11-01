@@ -12,18 +12,16 @@ router.get("/", (req, res) => {
 });
 
 // get one user's schedule
-// withAuth,
-router.get("/schedule", async (req, res) => {
-  try {
-    const scheduleData = await Schedule.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-      ],
-    });
-
+router.get('/schedule', withAuth, async (req, res) => {
+try {
+  const scheduleData = await Schedule.findAll({
+    include: [
+      {
+        model: User,
+        attributes: ['name'],
+      }
+    ]
+  });
     if (!scheduleData) {
       res.status(404).json({ message: "No schedule for this user!" });
       return;

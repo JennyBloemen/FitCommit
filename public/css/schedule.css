@@ -84,6 +84,7 @@ main {
 .delete-btn {
     font-size: 1rem;
     width: 70%;
+    color: white;
 }
 
 .browse-btn {
