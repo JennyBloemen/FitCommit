@@ -27,8 +27,10 @@ const day = days.options[days.selectedIndex].value.trim();
 
 
 const newFormHandler = async (event) => {
-
     event.preventDefault();
+    const area = muscleGroupInput.value.trim();
+    const days = document.querySelector('#dropdownMenuLink');
+    const day = days.options[days.selectedIndex].value.trim();
 
 // Monday
     if (day === 'monday' && area) {
