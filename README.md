@@ -1,7 +1,7 @@
 <h1>FitCommit</h1>
 
 <h3>Description</h3>
-  <p> FitCommit is a free application designed to help you personalize your fitness workouts based on seven day weekly schedule. FitCommit allows you the flexibilty to input your worksouts and if you get stuck, you can visit the workout page for ideas. 
+  <p> FitCommit is a free application designed to help you personalize your fitness workouts based on a seven-day weekly schedule. FitCommit allows you the flexibility to input your workouts and if you get stuck, you can visit the workout page for ideas. 
   </p>
 <br>
 <h3>Project Requirements</h3>
@@ -34,7 +34,7 @@
 <img src="./assets/images/MuSearchDemo.gif"width="640" height="360"/>
 
 <img src="./assets/images/Screen-Capture-1 copy.jpg">
-<img src="./assets/images/Screen-Capture-2 copy.jpg">
+<img 
 <br>
 <h3>Technologies Used</h3>
 <ul>
