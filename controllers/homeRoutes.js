@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const { User, Schedule, Exercise, Workouts } = require("../models");
+const { User, Schedule, Workouts } = require("../models");
 const withAuth = require("../utils/auth");
 
-// Prevent non logged in users from viewing the homepage
+// Renders the homepage
 router.get("/", (req, res) => {
   res.render("homepage", {
     logged_in: req.session.logged_in,
@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
   });
 });
 
-// get one user's schedule
+// Populates one user's schedule
 router.get('/schedule', withAuth, async (req, res) => {
 try {
   const scheduleData = await Schedule.findAll({
@@ -46,7 +46,7 @@ try {
   }
 });
 
-// // Route to render exercises
+// Route to render exercises from database
 router.get("/exercises", withAuth, async (req, res) => {
   try {
     const workoutData = await Workouts.findAll().catch((err) => {
@@ -56,10 +56,9 @@ router.get("/exercises", withAuth, async (req, res) => {
     const exercises = workoutData.map((exercise) =>
       exercise.get({ plain: true })
     );
-    // console.log(exercises);
+
     res.render("exercises", {
       exercises,
-      // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
       title: "Exercises",
       style: "exercises.css",

@@ -1,10 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// Might rename to Day
 class Schedule extends Model {}
   
-// Would be day.init...
 Schedule.init(
   {
     id: {
