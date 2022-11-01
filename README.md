@@ -45,8 +45,8 @@
   <li>Node</li>
   <li>Express</li>
   <li>Sequelize</li>
-  <li>mysql2</li>
-  <li>Sequelize</li><li>Background Photo by <a href="https://unsplash.com/@shapelined?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shapelined</a> on <a href="https://unsplash.com/wallpapers/colors/grey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  <li>mysq2</li>
+  <li>Background Photo by <a href="https://unsplash.com/@shapelined?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shapelined</a> on <a href="https://unsplash.com/wallpapers/colors/grey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   </li>
 </ul>
 
