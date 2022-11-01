@@ -2,9 +2,10 @@ const router = require('express').Router();
 const { User, Schedule } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+
+// HOW DOES IT KNOW WHICH PUT ROUTE TO USE? 
  
-// updates data on the calendar
-// withAuth,
+// updates data on the calendar with user input
 router.put('/', async (req, res) => {
   try {
     const newSchedule = await Schedule.update(
@@ -21,7 +22,6 @@ router.put('/', async (req, res) => {
           }
         }
     );
-    console.log(newSchedule);
 
     res.status(200).json(newSchedule);
   } catch (err) {
@@ -29,8 +29,9 @@ router.put('/', async (req, res) => {
   }
 });
 
-// Delete route for each button 
+// put route to update calendar with an empty string for each delete button 
 router.put('/', withAuth, async (req, res) => {
+  console.log('HERE', req.body.area);
   try {
     const scheduleData = await Schedule.update(
       {
@@ -54,6 +55,7 @@ router.put('/', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;
 
