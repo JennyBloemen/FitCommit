@@ -1,8 +1,10 @@
 /* styling sheet for the schedule page */
 
 :root {
-    --red-color: #df2c14;
+    --red-color: #ce1d06;
+    --dark-red: #460000;
     --light-background-grey: #f0f8ff;
+    --greyreal: #555454;
     --font-body: 'Roboto', sans-serif;
     --blue-white: #e7eff6;
 }
@@ -10,16 +12,20 @@
 body { 
     margin: 0;
     box-sizing: border-box;
-    background-color: var(--light-background-grey);
     color: black;
     font-family: (--font-body);
+    background-color: var(--greyreal);
+}
+
+.userinputContent {
+    font-size: 1.3rem;
+    padding: .2rem;
 }
 
 main {
     margin: 1rem;
     position: relative;
 }
-
 
 .nav-color {
     background-color: black;
@@ -50,7 +56,7 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 5rem;
     margin-bottom: 1rem;
     background-color: var(--red-color);
     padding-top: 1rem;
@@ -58,14 +64,15 @@ main {
     padding-right: 1rem;
     padding-left: 1rem;
     border-radius: 5px;
+    box-shadow: 0 0 10px 5px var(--dark-red);
 }
 
 .my-workout {
-    font-size: 3rem;
+    font-size: 3.8rem;
     letter-spacing: .04em;
     font-family: var(--font-body);
     font-weight: bold;
-    color: black;
+    color: var(--light-background-grey);
 }
 
 #schedule-link {
@@ -87,8 +94,15 @@ main {
     font-size: 1.2rem;
 }
 
+.coloring {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 1.2rem;
+}
+
 .absolutely {
     position: relative;
+    background-color: #d1d1d1;
 }
 
 .delete-btn {
@@ -99,14 +113,20 @@ main {
     position: absolute;
     bottom: 20px;
     right: 52px;
+    background-color: black;
 }
 
 .browse-btn {
     font-size: 1.2rem;
 }
 
+#submitButton {
+    background-color: black;
+}
+
 #browseButton {
     font-size: 1.5rem;
+    background-color: black;
 }
 
 #dropdownMenuLink {
@@ -124,6 +144,8 @@ main {
 
 .biggerBox {
     width: 13rem;
+    margin: .1rem;
+    box-shadow: 0 0 2px 2px black;
 }
 
 .populated-data {
@@ -146,6 +168,7 @@ main {
 
 .inputHeader {
     font-size: 2rem;
+    color: white;
 }
 
 .inputFont {
