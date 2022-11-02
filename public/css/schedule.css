@@ -110,8 +110,7 @@ main {
 
 .biggerBox {
     width: 13rem;
-    box-shadow: 0 0 2px .5px black;
-    margin: 2px;
+    margin: .5px;
 }
 
 .delete-btn {
