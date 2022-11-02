@@ -37,7 +37,11 @@ The application also contains an exercises page, with data populated from the da
 
 <h3>Screenshot or Video of Application</h3>
 <!-- video -->
-<img width="640" height="360" alt="FitCommit-Homepage-Screenshot" src="https://user-images.githubusercontent.com/109031060/199608740-1f274d5c-d94b-4bca-9c60-3e46c816668e.png">
+
+https://user-images.githubusercontent.com/109031060/199611251-41033dca-1f84-4138-9490-15e9fa3ca365.mp4
+
+
+
 
 <img src="./assets/FitCommit-Homepage-Screenshot.png">
 <img 
