@@ -39,6 +39,11 @@ The application also contains an exercises page, with data populated from the da
 <!-- video -->
 https://user-images.githubusercontent.com/109031060/199611251-41033dca-1f84-4138-9490-15e9fa3ca365.mp4
 
+
+
+
+
+
 <h3>Screenshot of Application</h3>
 <img src="./assets/FitCommit-Homepage-Screenshot.png">
 
