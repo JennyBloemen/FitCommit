@@ -1,8 +1,8 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Schedule extends Model {}
-  
+
 Schedule.init(
   {
     id: {
@@ -18,52 +18,51 @@ Schedule.init(
     day: {
       type: DataTypes.STRING,
       allowNull: true,
-      defaultValue: '',
+      defaultValue: "",
     },
     mon: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
-    }, 
+    },
     tue: {
-        type: DataTypes.BOOLEAN,
-        allowNull: true,
-      }, 
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+    },
     wed: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
-    }, 
+    },
     thurs: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
-    }, 
+    },
     fri: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
-    }, 
+    },
     sat: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
-    }, 
+    },
     sun: {
       type: DataTypes.BOOLEAN,
       allowNull: true,
-    }, 
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id',
+        model: "user",
+        key: "id",
       },
-    }
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,  
-    modelName: 'schedule',
+    underscored: true,
+    modelName: "schedule",
   }
 );
 
 module.exports = Schedule;
-
