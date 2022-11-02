@@ -15,7 +15,7 @@ The application also contains an exercises page, with data populated from the da
   <li>Use Handlebars.js as the template engine.</li>
   <li>Use MySQL and the Sequelize ORM for the database.</li>
   <li>Have both GET and POST routes for retrieving and adding new data.</li>
-  <li>Use at least one new library, package, or technology that we haven’t discussed.</li>
+  <li>Use at least one new library, package, or technology that we haven’t discussed.
   <li>Have a folder structure that meets the MVC paradigm.</li>
   <li>Include authentication (express-session and cookies).</li> 
   <li>Protect API keys and sensitive information with environment variables.</li>
@@ -30,15 +30,14 @@ The application also contains an exercises page, with data populated from the da
 <br>
 <h3>Links to Page</h3>
   <ul>
-    <li>Deployed: </li>
     <li>GitHub Repo:https://github.com/mich-hales/FitCommit.git </li>
     <li>Heroku: https://fitcommitttttt2.herokuapp.com/</li>
-    <li>Demo: 
+    <li>Demo: https://drive.google.com/file/d/1EtLEBXhyJYt28cEGW4TDd6YSV69gKWPy/view?usp=share_link/</li>
   </ul>
 
 <h3>Screenshot or Video of Application</h3>
 <!-- video -->
-<img src="./assets/FitCommit.wav"width="640" height="360"/>
+<img width="640" height="360" alt="FitCommit-Homepage-Screenshot" src="https://user-images.githubusercontent.com/109031060/199608740-1f274d5c-d94b-4bca-9c60-3e46c816668e.png">
 
 <img src="./assets/FitCommit-Homepage-Screenshot.png">
 <img 
