@@ -1,7 +1,12 @@
 <h1>FitCommit</h1>
 
 <h3>Description</h3>
-  <p> FitCommit is a free application designed to help you personalize your fitness workouts based on a seven-day weekly schedule. FitCommit allows you the flexibility to input your workouts and if you get stuck, you can visit the workout page for ideas. 
+  <p> FitCommit is a free restful API application designed to help users personalize fitness workouts based on a seven-day weekly schedule. The application has a one-time sign up feature that allows a user to create an account with authentication that is encrypted for security.
+
+Once an account is created, the user is automatically logged in and can start personalizing a weekly schedule. The schedule is unique to each user and displays the users name in the heading. The schedule page uses a form that is designed to accept and respond to user input, adding custom text based on the day of the week. The form can also be used to update previously scheduled data. The schedule page includes a delete button feature to remove data based on the day of the week. Sweetalert2, a new node package, is used to create a customized popup box to ensure deletion is intentional.
+
+The application also contains an exercises page, with data populated from the database. This page is for users to browse and obtain ideas to add to their schedule.
+
   </p>
 <br>
 <h3>Project Requirements</h3>
@@ -26,7 +31,9 @@
 <h3>Links to Page</h3>
   <ul>
     <li>Deployed: </li>
-    <li>GitHub Repo: </li>
+    <li>GitHub Repo:https://github.com/mich-hales/FitCommit.git </li>
+    <li>Heroku: https://fitcommitttttt2.herokuapp.com/</li>
+    <li>Demo: 
   </ul>
 
 <h3>Screenshot or Video of Application</h3>
@@ -46,8 +53,7 @@
   <li>Express</li>
   <li>Sequelize</li>
   <li>mysq2</li>
-  <li>Background Photo by <a href="https://unsplash.com/@shapelined?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shapelined</a> on <a href="https://unsplash.com/wallpapers/colors/grey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  </li>
+  <li>Adobe Stock<a href="https://stock.adobe.com/contributor/205344630/twinsterphoto?load_type=author&prev_url=detail">Background Photo</a></li>
 </ul>
 
 <h3>Collaborators</h3>
