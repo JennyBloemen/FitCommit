@@ -38,9 +38,9 @@ The application also contains an exercises page, with data populated from the da
 
 <h3>Screenshot or Video of Application</h3>
 <!-- video -->
-<img src="./assets/images/MuSearchDemo.gif"width="640" height="360"/>
+<img src="./assets/FitCommit.wav"width="640" height="360"/>
 
-<img src="./assets/images/Screen-Capture-1 copy.jpg">
+<img src="./assets/FitCommit-Homepage-Screenshot.png">
 <img 
 <br>
 <h3>Technologies Used</h3>
