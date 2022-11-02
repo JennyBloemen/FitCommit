@@ -35,16 +35,13 @@ The application also contains an exercises page, with data populated from the da
     <li>Demo: https://drive.google.com/file/d/1EtLEBXhyJYt28cEGW4TDd6YSV69gKWPy/view?usp=share_link/</li>
   </ul>
 
-<h3>Screenshot or Video of Application</h3>
+<h3>Video of Application</h3>
 <!-- video -->
-
 https://user-images.githubusercontent.com/109031060/199611251-41033dca-1f84-4138-9490-15e9fa3ca365.mp4
 
-
-
-
+<h3>Screenshot of Application</h3>
 <img src="./assets/FitCommit-Homepage-Screenshot.png">
-<img 
+
 <br>
 <h3>Technologies Used</h3>
 <ul>
@@ -56,7 +53,7 @@ https://user-images.githubusercontent.com/109031060/199611251-41033dca-1f84-4138
   <li>Express</li>
   <li>Sequelize</li>
   <li>mysq2</li>
-  <li>Adobe Stock<a href="https://stock.adobe.com/contributor/205344630/twinsterphoto?load_type=author&prev_url=detail">Background Photo</a></li>
+  <li>Adobe Stock <a href="https://stock.adobe.com/contributor/205344630/twinsterphoto?load_type=author&prev_url=detail">Background Photo</a></li>
 </ul>
 
 <h3>Collaborators</h3>
