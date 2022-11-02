@@ -4,7 +4,7 @@
     --red-color: #ce1d06;
     --dark-red: #460000;
     --light-background-grey: #f0f8ff;
-    --greyreal: #555454;
+    --greyreal: #adadad;
     --font-body: 'Roboto', sans-serif;
     --blue-white: #e7eff6;
 }
@@ -58,21 +58,23 @@ main {
     align-items: center;
     margin-top: 5rem;
     margin-bottom: 1rem;
-    background-color: var(--red-color);
+    background-color: rgb(51, 51, 51);
     padding-top: 1rem;
     padding-bottom: 2rem;
     padding-right: 1rem;
     padding-left: 1rem;
     border-radius: 5px;
-    box-shadow: 0 0 10px 5px var(--dark-red);
+    box-shadow: 0 0 5px 2px #626262;
 }
 
 .my-workout {
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     letter-spacing: .04em;
     font-family: var(--font-body);
     font-weight: bold;
-    color: var(--light-background-grey);
+    color: white;
+    text-shadow: 2.5px 2.5px rgb(51, 51, 51);
+    margin-bottom: 2rem;
 }
 
 #schedule-link {
@@ -95,14 +97,21 @@ main {
 }
 
 .coloring {
-    background-color: rgb(24, 24, 24);
+    background-color: var(--red-color);
     color: white;
     font-size: 1.2rem;
+    text-shadow: 1px 1px rgb(66, 66, 66);
 }
 
 .absolutely {
     position: relative;
-    background-color: #d1d1d1;
+    background-color: #f8f8f8;
+}
+
+.biggerBox {
+    width: 13rem;
+    box-shadow: 0 0 2px .5px black;
+    margin: 2px;
 }
 
 .delete-btn {
@@ -113,7 +122,11 @@ main {
     position: absolute;
     bottom: 20px;
     right: 52px;
-    background-color: black;
+    background-color: rgb(66, 66, 66);
+}
+
+.dayofweekSelect {
+    background-color: #f8f8f8;
 }
 
 .browse-btn {
@@ -121,31 +134,32 @@ main {
 }
 
 #submitButton {
-    background-color: black;
+    background-color: var(--red-color);
+    box-shadow: 0 0 5px .5px var(--dark-red);
 }
 
 #browseButton {
     font-size: 1.5rem;
-    background-color: black;
+    background-color: rgb(66, 66, 66);
+    box-shadow: 0 0 3px .5px #626262;
+}
+
+#muscleGroup {
+    background-color: #f8f8f8;
+    font-size: 1.3rem;
 }
 
 #dropdownMenuLink {
-    background-color: white;
+    background-color: #f8f8f8;
     width: 90%;
     border-radius: 5px;
     font-size: 1.3rem;
     height: 3rem;
     padding: .5rem;
-}
+}x
 
 .hide {
     display: none;
-}
-
-.biggerBox {
-    width: 13rem;
-    margin: .1rem;
-    box-shadow: 0 0 2px 2px black;
 }
 
 .populated-data {
@@ -169,10 +183,16 @@ main {
 .inputHeader {
     font-size: 2rem;
     color: white;
+    text-shadow: 2px 2px #626262;
 }
 
 .inputFont {
     font-size: 1.5rem;
+}
+
+#muscleGroupHeader {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .headerSpacing {
