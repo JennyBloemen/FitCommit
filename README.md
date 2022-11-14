@@ -45,7 +45,7 @@ https://user-images.githubusercontent.com/109031060/199611251-41033dca-1f84-4138
 
 
 ## Screenshot of Application
-![photo of website's homepage featuring two individuals encouraging eachother in a gym setting]("/assets/FitCommit-Homepage-Screenshot.png")
+![photo of website's homepage featuring two individuals encouraging eachother in a gym setting](./assets/FitCommit-Homepage-Screenshot.png)
 
 
 
@@ -57,7 +57,7 @@ https://user-images.githubusercontent.com/109031060/199611251-41033dca-1f84-4138
   * Sequelize
   * MySQL
   * SweetAlert2
-  * Adobe Stock ![Bacground Photo]("https://stock.adobe.com/contributor/205344630/twinsterphoto?load_type=author&prev_url=detail)
+  * Adobe Stock ![Background Photo](https://stock.adobe.com/contributor/205344630/twinsterphoto?load_type=author&prev_url=detail)
 
 ## Collaborators
   * Jenny Bloemen
